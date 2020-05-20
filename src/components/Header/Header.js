@@ -14,6 +14,9 @@ const StyledHeader = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
 `
 
 const StyledLogo = styled.img`
@@ -21,7 +24,7 @@ const StyledLogo = styled.img`
   width: 48px;
 `
 
-const StyledBtn = styled.div`
+const MenuButton = styled.div`
     background-image: url(${MenuBtn});
     background-repeat: no-repeat;
     height: 22px;
@@ -37,16 +40,20 @@ class Header extends React.Component {
     }
 
     toggleMenu = () => {
-        !this.setState.menuOpened ? this.setState({ menuOpened: true})
+        console.log('clickkkkkkkk')
+        this.setState(prevState => ({
+            menuOpened: !prevState.menuOpened
+        }))
     }
 
     render () {
         return (
-            <StyledHeader>
+            <StyledHeader >
                     <Link to='/'>
                         <StyledLogo src={Logo} alt='strides logo' />
                     </Link>
-                    <StyledBtn />
+                    <MenuButton onClick={this.toggleMenu} />
+                    { !!this.state.menuOpened && <MenuDrawer toggleMenu={this.toggleMenu}/>}
             </StyledHeader>
         )        
     }

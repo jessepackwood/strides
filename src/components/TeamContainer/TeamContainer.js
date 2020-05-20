@@ -15,6 +15,7 @@ const team = [
 
 const TeamWrapper = styled.div`
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     max-width: 760px;
     margin: 0 auto;

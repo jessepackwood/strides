@@ -12,6 +12,9 @@ const Wrapper = styled.div`
     padding-bottom: 40px;
     max-width: 760px;
     margin: 0 auto;
+    @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 const Container = styled.div`
@@ -23,7 +26,7 @@ const Container = styled.div`
 
 const QuestionWrapper = styled.div`
     /* width: 324px; */
-    height: 28px;
+    max-height: 60px;
     font-family: Frank Ruhl Libre;
     font-style: normal;
     font-weight: normal;
@@ -31,10 +34,12 @@ const QuestionWrapper = styled.div`
     line-height: 28px;
     color: #FFFFFF;
     max-width: 480px;
+    display: block;
 `
 const AnswerWrapper = styled.div`
+    display: block;
     margin-top: 10px;
-    height: 50px;
+    /* height: 50px; */
     font-family: Muli;
     font-style: normal;
     font-weight: 600;
@@ -65,6 +70,14 @@ const FAQ = () => (
                 </QuestionWrapper>
                 <AnswerWrapper>
                     Depends
+                </AnswerWrapper>
+            </Container>
+            <Container>
+                <QuestionWrapper>
+                    Ok... How long will it take?
+                </QuestionWrapper>
+                <AnswerWrapper>
+                    Depends.
                 </AnswerWrapper>
             </Container>
             <Container>

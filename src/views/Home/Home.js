@@ -12,9 +12,8 @@ import FAQ from '../../components/FAQ/FAQ'
 const HomeWrapper = styled.div`
     background-color: #08090F;
     margin: 0;
-    padding: 0 50px;
-    /* max-width: 760px; */
-
+    padding: 0 50px 100px;
+                                    
 `
 
 const StyledHomeTitle = styled.h1`
@@ -104,6 +103,7 @@ const Home = () => (
         <LinkWrapper>
             <ActionLink text='Contact us' url='/contact' />
         </LinkWrapper>
+        <SmallSpacer />
         <SmallSpacer />
         <StyledH1>
             The team
