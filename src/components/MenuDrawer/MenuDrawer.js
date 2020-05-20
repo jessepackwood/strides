@@ -6,7 +6,6 @@ import StyledHamburger from '../../components/Hamburger/Hamburger'
 import { Link } from 'react-router-dom'
 
 const StyledDrawer = styled.div`
-    /* width: 350px; */
     max-width: 760px;
     position: absolute;
     top: 0;
@@ -20,10 +19,6 @@ const StyledDrawer = styled.div`
 const CloseBtnWrapper = styled.div`
     width: 100%;
     display: flex;
-    /* border: 1px solid red; */
-`
-const CloseBtn = styled.button`
-    margin-left: auto;
 `
 
 const MenuTitle = styled.h2`
@@ -32,6 +27,13 @@ const MenuTitle = styled.h2`
     font-size: 40px;
     color: #fff;
 `
+
+const StyledLink = styled(Link)`
+    :visited {
+        color: ${props => props.theme.dark.bg}
+    }
+`
+
 const MenuItem = styled.h4`
     font-family: ${props => props.theme.font.muli};
     font-size: 20px;
@@ -57,11 +59,11 @@ const MenuDrawer = ({toggleMenu}) => {
                 <MenuTitle>
                     Work
                 </MenuTitle>
-                <Link to='/work/the-daily-shift'>
+                <StyledLink to='/work/the-daily-shift'>
                     <MenuItem>
                         The Daily Shift
                     </MenuItem>
-                </Link>
+                </StyledLink>
                 <MenuItem>
                     Blossom
                 </MenuItem>

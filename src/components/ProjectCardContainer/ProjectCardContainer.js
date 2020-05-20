@@ -2,12 +2,13 @@ import React from 'react'
 import ProjectCard from '../ProjectCard/ProjectCard'
 import BlossomPhoto from '../../assets/iPhone-X-Clay.png'
 import SportsPhoto from '../../assets/iPhone-X-sports.png'
+import ChallengePhoto from '../../assets/whole-body-challenge.png'
 import styled from 'styled-components'
 
 const projects = [
     {title: 'Blossom', subtitle: 'Dev + Design', text: 'Blossom is a mobile app that helps you connect with people around you and invite them to have fun.', image: BlossomPhoto},
     {title: 'Next Level Sports', subtitle: 'Dev + Design', text: ' Next Level Sports is an iOS app that allows you to live stream and record stats from your favorite sporting events.', image: SportsPhoto},
-    {title: 'Whole Body Challenge', subtitle: 'Dev + Design', text: 'The Whole Body Challenge presented by New U allowed users to track their weight loss weekly for a chance to win $100,000'}
+    {title: 'Whole Body Challenge', subtitle: 'Dev + Design', text: 'The Whole Body Challenge allows users to track their weight loss for a chance to win $100,000', image: ChallengePhoto}
 ]
 
 const ProjectsWrapper = styled.div`

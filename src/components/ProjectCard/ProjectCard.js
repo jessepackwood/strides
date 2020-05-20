@@ -73,13 +73,19 @@ const LinkWrapper = styled.div`
     }
 `
 
-const CornerDot = styled.img(attr)`
-    
+const CornerDot = styled.img.attrs({
+    src: GreenDot,
+})`
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
 `
 
 const ProjectCard = ({ title, text, image, subtitle, position}) => (
     <StyledCard position={position}>
-        <GreenDot />
+        <CornerDot />
         <TextWrapper>
             <StyledTitle>
                 {title}

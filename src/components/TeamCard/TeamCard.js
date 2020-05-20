@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components'
+import GreenDot from '../../assets/green-circle.png'
 
 const StyledCard = styled.div`
+    position: relative;
     color: #fff;
     background: #212231;
     width: 288px;
@@ -25,9 +27,20 @@ const ProfilePhoto = styled.div`
     background-image: ${props => `url(${props.background})`};
 `
 
+const CornerDot = styled.img.attrs({
+    src: GreenDot
+})`
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+`
+
 const TeamCard = ({name, title, image}) => {
     return (
         <StyledCard >
+            <CornerDot />
             <NameWrapper>
                 <h4>
                     {name}
