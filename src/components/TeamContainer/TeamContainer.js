@@ -1,9 +1,9 @@
 import React from 'react';
 import TeamCard from '../TeamCard/TeamCard'
 import styled from 'styled-components'
-import austin_img from '../../assets/austin_img.jpg'
-import jesse_img from '../../assets/jesse_img.JPG'
-import brian_img from '../../assets/brian_img.png'
+import austin_img from '../../assets/team/austin_img.jpg'
+import jesse_img from '../../assets/team/jesse_img.JPG'
+import brian_img from '../../assets/team/brian_img.png'
 
 
 const team = [
@@ -15,7 +15,7 @@ const team = [
 
 const TeamWrapper = styled.div`
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
     max-width: 760px;
     margin: 0 auto;

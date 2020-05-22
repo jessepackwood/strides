@@ -29,6 +29,7 @@ const MenuTitle = styled.h2`
 `
 
 const StyledLink = styled(Link)`
+    text-decoration: none;
     :visited {
         color: ${props => props.theme.dark.bg}
     }
@@ -60,22 +61,30 @@ const MenuDrawer = ({toggleMenu}) => {
                     Work
                 </MenuTitle>
                 <StyledLink to='/work/the-daily-shift'>
-                    <MenuItem>
+                    <MenuItem onClick={toggleMenu}>
                         The Daily Shift
                     </MenuItem>
                 </StyledLink>
-                <MenuItem>
-                    Blossom
-                </MenuItem>
-                <MenuItem>
-                    Whole Body Challenge
-                </MenuItem>
-                <MenuItem>
-                    Next Level Sports
-                </MenuItem>
-                <MenuItem>
-                    Starv
-                </MenuItem>
+                <StyledLink to='/work/blossom'>
+                    <MenuItem onClick={toggleMenu}>
+                        Blossom
+                    </MenuItem>
+                </StyledLink>
+                <StyledLink to='/work/whole-body-challenge'>
+                    <MenuItem onClick={toggleMenu}>
+                        Whole Body Challenge
+                    </MenuItem>
+                </StyledLink>
+                <StyledLink>
+                    <MenuItem onClick={toggleMenu}>
+                        Next Level Sports
+                    </MenuItem>
+                </StyledLink>
+                <StyledLink to='/work/starv'>
+                    <MenuItem onClick={toggleMenu}>
+                        Starv
+                    </MenuItem>
+                </StyledLink>
                 <ActionLink text='Contact' url='/contact' />
             </StyledDrawer>
         </ThemeProvider>

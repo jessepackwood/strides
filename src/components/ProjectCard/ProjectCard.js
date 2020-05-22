@@ -83,27 +83,40 @@ const CornerDot = styled.img.attrs({
     width: 15px;
 `
 
-const ProjectCard = ({ title, text, image, subtitle, position}) => (
-    <StyledCard position={position}>
-        <CornerDot />
-        <TextWrapper>
-            <StyledTitle>
-                {title}
-            </StyledTitle>
-            <StyledSubtitle>
-                {subtitle}
-            </StyledSubtitle>
-            <StyledText>
-                {text}
-            </StyledText>
-            <LinkWrapper>
-                <ActionLink text='Read more' url='/work' />
-            </LinkWrapper>
-        </TextWrapper>
-        <ImageWrapper>
-            <StyledImg src={image} alt='phone display' />
-        </ImageWrapper>
-    </StyledCard>
-)
+class ProjectCard extends React.Component {
+
+    state = {
+        cardOpened: false,
+    }
+
+    handleCard = () => {
+
+    }
+
+        render () {
+            return (
+                <StyledCard position={this.props.position}>
+                <CornerDot />
+                <TextWrapper>
+                    <StyledTitle>
+                        {this.props.title}
+                    </StyledTitle>
+                    <StyledSubtitle>
+                        {this.props.subtitle}
+                    </StyledSubtitle>
+                    <StyledText>
+                        {this.props.text}
+                    </StyledText>
+                    <LinkWrapper>
+                        <ActionLink text='Read more' url='/work' />
+                    </LinkWrapper>
+                </TextWrapper>
+                <ImageWrapper>
+                    <StyledImg src={this.props.image} alt='phone display' />
+                </ImageWrapper>
+            </StyledCard>
+            )
+        }
+}
 
 export default ProjectCard
