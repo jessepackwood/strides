@@ -7,7 +7,7 @@ import MenuBtn from '../../assets/menu-btn.png'
 import MenuDrawer from '../../components/MenuDrawer/MenuDrawer'
 
 const StyledHeader = styled.div`
-    padding: 0 50px;
+    padding: 0 25px;
     /* background: #08090F; */
     height: 72px;
     /* width: 100%; */
