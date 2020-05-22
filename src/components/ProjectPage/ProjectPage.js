@@ -6,7 +6,7 @@ font-family: Frank Ruhl Libre;
 font-style: normal;
 font-weight: 900;
 font-size: 58px;
-line-height: 41px;
+line-height: 75px;
 color: #FFFFFF;
 margin: 0;
 `

@@ -49,7 +49,7 @@ const StyledSubtitle = styled.p`
     font-weight: normal;
     font-size: 20px;
     line-height: 28px;
-    max-width: 448px;
+    max-width: 760px;
 `
 
 const StyledPaintSpot = styled.img`

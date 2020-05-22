@@ -18,6 +18,7 @@ const StyledCard = styled.div`
     margin-left: ${props => props.position};
     @media (max-width: 400px) {
         flex-direction: column;
+        width: 229px;
     }
 `
 const TextWrapper = styled.div`
@@ -29,12 +30,16 @@ const ImageWrapper = styled.div`
     height: auto;
     margin-left: 25px;
     @media (max-width: 400px) {
-        margin-top: 20px;
+        margin: 20px auto 0;
     }
 `
 const StyledImg = styled.img`
     height: 313px;
     width: auto;
+    @media (max-width: 400px) {
+        width: 150px;
+        height: auto;
+    }
 `
 
 const StyledTitle = styled.h1`
@@ -45,6 +50,9 @@ const StyledTitle = styled.h1`
     line-height: 41px;
     color: #FFFFFF;
     margin: 0;
+    @media (max-width: 400px) {
+        width: 220px;
+    }
 `
 
 const StyledSubtitle = styled.div`

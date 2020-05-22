@@ -39,6 +39,13 @@ const CornerDot = styled.img.attrs({
     margin-left: -5px;
 `
 
+const HiddenWrapper = styled.ul`
+    display: none;
+    list-style-image: GreenDot;
+`
+const BulletWrapper = styled.li`
+`
+
 const TeamCard = ({name, title, image}) => {
     return (
         <StyledCard >
@@ -51,7 +58,11 @@ const TeamCard = ({name, title, image}) => {
                     {title}
                 </h5>
             </NameWrapper>
-
+            <HiddenWrapper>
+                <BulletWrapper> One </BulletWrapper>
+                <BulletWrapper> Two </BulletWrapper>
+                <BulletWrapper> Three </BulletWrapper>
+            </HiddenWrapper>
             
             <ProfilePhoto background={image} />
         </StyledCard>
