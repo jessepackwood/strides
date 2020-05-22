@@ -75,7 +75,7 @@ const MenuDrawer = ({toggleMenu}) => {
                         Whole Body Challenge
                     </MenuItem>
                 </StyledLink>
-                <StyledLink>
+                <StyledLink to='/work/next-level-sports'>
                     <MenuItem onClick={toggleMenu}>
                         Next Level Sports
                     </MenuItem>

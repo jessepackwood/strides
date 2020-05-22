@@ -81,6 +81,8 @@ const CornerDot = styled.img.attrs({
     left: 0;
     height: 15px;
     width: 15px;
+    margin-top: -5px;
+    margin-left: -5px;
 `
 
 class ProjectCard extends React.Component {
@@ -108,7 +110,7 @@ class ProjectCard extends React.Component {
                         {this.props.text}
                     </StyledText>
                     <LinkWrapper>
-                        <ActionLink text='Read more' url='/work' />
+                        <ActionLink text='Read more' url={this.props.link} />
                     </LinkWrapper>
                 </TextWrapper>
                 <ImageWrapper>

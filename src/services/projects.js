@@ -18,6 +18,12 @@ import starv2 from '../assets/Starv/Starv-02.png'
 import starv3 from '../assets/Starv/Starv-03.png'
 import starv4 from '../assets/Starv/Starv-04.png'
 import starv5 from '../assets/Starv/Starv-05.png'
+import nls1 from '../assets/NLS/NLS1.png'
+import nls2 from '../assets/NLS/NLS2.png'
+import nls3 from '../assets/NLS/NLS3.png'
+import nls4 from '../assets/NLS/NLS4.png'
+import nls5 from '../assets/NLS/NLS5.png'
+
 
 
 export const projects = {
@@ -52,5 +58,13 @@ export const projects = {
         problem: 'Tellus elementum sagittis vitae et leo. Dui ut ornare lectus sit. At quis risus sed vulputate. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin. Nibh ipsum consequat nisl vel pretium. Ligula ullamcorper malesuada proin libero nunc consequat. Tellus at urna condimentum mattis pellentesque id. Pretium lectus quam id leo in vitae.',
         solution: 'Lorem donec massa sapien faucibus et molestie ac feugiat sed. Tellus elementum sagittis vitae et leo. Dui ut ornare lectus sit. At quis risus sed vulputate. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin. Nibh ipsum consequat nisl vel pretium. Ligula ullamcorper malesuada proin libero nunc consequat. Tellus at urna condimentum mattis pellentesque id. Pretium lectus quam id leo in vitae.',
         images: [ starv1, starv2, starv3, starv4, starv5 ]
+    },
+    nextLevelSports: {
+        title: 'Next Level Sports',
+        work: 'Design + Dev',
+        timeline: '12 weeks',
+        problem: 'Tellus elementum sagittis vitae et leo. Dui ut ornare lectus sit. At quis risus sed vulputate. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin. Nibh ipsum consequat nisl vel pretium. Ligula ullamcorper malesuada proin libero nunc consequat. Tellus at urna condimentum mattis pellentesque id. Pretium lectus quam id leo in vitae.',
+        solution: 'Lorem donec massa sapien faucibus et molestie ac feugiat sed. Tellus elementum sagittis vitae et leo. Dui ut ornare lectus sit. At quis risus sed vulputate. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin. Nibh ipsum consequat nisl vel pretium. Ligula ullamcorper malesuada proin libero nunc consequat. Tellus at urna condimentum mattis pellentesque id. Pretium lectus quam id leo in vitae.',
+        images: [ nls1, nls2, nls3, nls4, nls5 ]
     }
 }

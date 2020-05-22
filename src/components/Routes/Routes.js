@@ -15,6 +15,7 @@ const Routes = () => {
             <Route path='/work/the-daily-shift' render= {(props) => <ProjectView {...props} project={projects.theDailyShift} />} />
             <Route path='/work/whole-body-challenge' render= {(props) => <ProjectView {...props} project={projects.wholeBodyChallenge} />} />
             <Route path='/work/starv' render= {(props) => <ProjectView {...props} project={projects.starv} />} />
+            <Route path='/work/next-level-sports' render={(props) => <ProjectView {...props} project={projects.nextLevelSports} /> } />
         </Switch>
     );
 };

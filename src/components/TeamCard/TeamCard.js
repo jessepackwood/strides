@@ -35,6 +35,8 @@ const CornerDot = styled.img.attrs({
     position: absolute;
     top: 0;
     left: 0;
+    margin-top: -5px;
+    margin-left: -5px;
 `
 
 const TeamCard = ({name, title, image}) => {
