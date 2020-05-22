@@ -12,8 +12,7 @@ import FAQ from '../../components/FAQ/FAQ'
 const HomeWrapper = styled.div`
     background-color: #08090F;
     margin: 0;
-    padding: 0 50px 100px;
-                                    
+    padding: 0 50px 100px;            
 `
 
 const StyledHomeTitle = styled.h1`
