@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import ActionLink from '../../components/ActionLink/ActionLink'
 import GreenDot from '../../assets/green-circle.png'
+import {Link} from 'react-router-dom'
 
 const StyledCard = styled.div`
     position: relative;
@@ -92,7 +93,12 @@ const CornerDot = styled.img.attrs({
     margin-top: -5px;
     margin-left: -5px;
 `
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    :visted {
 
+    }
+`
 class ProjectCard extends React.Component {
 
     state = {
@@ -105,6 +111,7 @@ class ProjectCard extends React.Component {
 
         render () {
             return (
+                
                 <StyledCard position={this.props.position}>
                 <CornerDot />
                 <TextWrapper>
@@ -121,10 +128,13 @@ class ProjectCard extends React.Component {
                         <ActionLink text='Read more' url={this.props.link} />
                     </LinkWrapper>
                 </TextWrapper>
-                <ImageWrapper>
-                    <StyledImg src={this.props.image} alt='phone display' />
-                </ImageWrapper>
+                <StyledLink to={this.props.link}>
+                    <ImageWrapper>
+                        <StyledImg src={this.props.image} alt='phone display' />
+                    </ImageWrapper>
+                </StyledLink>
             </StyledCard>
+            
             )
         }
 }

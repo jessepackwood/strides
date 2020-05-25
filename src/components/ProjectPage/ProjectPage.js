@@ -70,12 +70,12 @@ const ProjectPage = ({project}) => {
             <StyledText>
                 {project.solution}
             </StyledText>
-            <StyledSubtitle>
+            {/* <StyledSubtitle>
                 Timeline
             </StyledSubtitle>
             <StyledText>
                 {project.timeline}
-            </StyledText>
+            </StyledText> */}
         </div>
 
     );
