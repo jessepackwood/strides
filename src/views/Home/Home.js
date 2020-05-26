@@ -15,6 +15,10 @@ const HomeWrapper = styled.div`
     padding: 0 50px 100px;            
 `
 
+const BannerWrapper = styled.div`
+    height: 100vh;
+`
+
 const StyledHomeTitle = styled.h1`
     max-width: 760px;
     font-family: Muli;
@@ -74,14 +78,14 @@ const Home = () => (
     <div>
         <Header />
         <HomeWrapper>
-        
-        <StyledHomeTitle>
-            We turn your ideas into apps
-        </StyledHomeTitle>
-        <LinkWrapper>
-            <ActionLink text='Get A Quote' url='/contact'/>
-        </LinkWrapper>
-        <Spacer />
+        <BannerWrapper>
+            <StyledHomeTitle>
+                We turn your ideas into apps
+            </StyledHomeTitle>
+            <LinkWrapper>
+                <ActionLink text='Get A Quote' url='/contact'/>
+            </LinkWrapper>
+        </BannerWrapper>
         <StyledH1>
             Our work
         </StyledH1>
