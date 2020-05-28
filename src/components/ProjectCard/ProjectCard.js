@@ -17,7 +17,7 @@ const StyledCard = styled.div`
     border-radius: 0px 30px 30px 30px;
     padding: 15px;
     margin-left: ${props => props.position};
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
         flex-direction: column;
         width: 229px;
     }
@@ -30,14 +30,14 @@ const ImageWrapper = styled.div`
     width: 50%;
     height: auto;
     margin-left: 25px;
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
         margin: 20px auto 0;
     }
 `
 const StyledImg = styled.img`
     height: 313px;
     width: auto;
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
         width: 150px;
         height: auto;
     }
@@ -51,7 +51,7 @@ const StyledTitle = styled.h1`
     line-height: 41px;
     color: #FFFFFF;
     margin: 0;
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
         width: 220px;
     }
 `
@@ -72,12 +72,12 @@ const StyledText = styled.p`
     font-size: 20px;
     line-height: 28px;
     color: #FFFFFF;
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
         display: none;
 }
 `
 const LinkWrapper = styled.div`
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
         display: none;
     }
 `
