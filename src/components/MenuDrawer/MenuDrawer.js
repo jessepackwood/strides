@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 const StyledDrawer = styled.div`
     max-width: 760px;
     position: absolute;
-    top: 0;
+    top: 15px;
     right: 25px;
     color: #fff;
     background-color: ${props => props.theme.dark.bg};

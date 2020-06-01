@@ -10,6 +10,9 @@ const ContactWrapper = styled.div`
     color: ${props => props.theme.dark.color};
     max-width: 650px;
     margin: 0 auto;
+    @media (max-width: 500px) {
+        padding-bottom: 100px;
+    }
 `
 
 const StyledTitle = styled.h1`
@@ -84,6 +87,9 @@ const StyledSubmitBtn = styled.input`
     :hover {
         cursor: pointer;
     }
+    @media (max-width: 500px) {
+
+    }
 `
 const GreenLine = styled.div`
     margin: 10px 0 0 7px;
@@ -118,7 +124,6 @@ export default class Contact extends Component {
         }
 
         clearInputs = () => {
-            console.log('clearrrrrrr')
             this.setState({ sentEmail: true })
         }
 

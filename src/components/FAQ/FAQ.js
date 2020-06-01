@@ -87,9 +87,9 @@ const FAQ = () => (
         </div>
         <div>
             <Spacer />
-            <ActionLink text='info@strides.dev' />
+            <ActionLink to='' text='info@strides.dev' />
             <Spacer />
-            <ActionLink text='(208) 227-4479' />
+            <ActionLink to='' text='(208) 227-4479' />
         </div>
     </Wrapper>
 )
