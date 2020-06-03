@@ -6,37 +6,51 @@ const StyledCard = styled.div`
     position: relative;
     color: #fff;
     background: #212231;
-    width: 288px;
-    height: 341px;
+    width: calc(50% - 24px);
+    height: 368px;
     background: #212231;
     box-shadow: 0px 4px 10px #000000;
     border-radius: 0px 30px 30px 30px;
-    margin: 25px 25px 25px 0px;
+    margin: 24px 24px 0 0px;
+
+    &:before{
+        content: "";
+        left: -10px;
+        top: -10px;
+        background-color: #66E0B9;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+    }
+`
+
+const CardInner = styled.div`
+    overflow: hidden;
+    height: 100%;
+    border-bottom-left-radius: 30px;
 `
 const NameWrapper = styled.div`
-    padding: 10px;
+    padding: 24px;
+    position: relative;
 
+    h4{
+        font-size: 24px;
+        margin: 0;
+    }
+
+    h5{
+        margin: 8px 0 0; 
+    }
 `
 
 const ProfilePhoto = styled.div`
-    height: 220px;
+    height: 300px;
     width: 100%;
     background-position: center;
     background-size: cover;
     border-radius: 0px 30px 0px 30px;
     background-image: ${props => `url(${props.background})`};
-`
-
-const CornerDot = styled.img.attrs({
-    src: GreenDot
-})`
-    height: 15px;
-    width: 15px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: -5px;
-    margin-left: -5px;
 `
 
 const HiddenWrapper = styled.ul`
@@ -49,22 +63,23 @@ const BulletWrapper = styled.li`
 const TeamCard = ({name, title, image}) => {
     return (
         <StyledCard >
-            <CornerDot />
-            <NameWrapper>
-                <h4>
-                    {name}
-                </h4>
-                <h5>
-                    {title}
-                </h5>
-            </NameWrapper>
-            <HiddenWrapper>
-                <BulletWrapper> One </BulletWrapper>
-                <BulletWrapper> Two </BulletWrapper>
-                <BulletWrapper> Three </BulletWrapper>
-            </HiddenWrapper>
-            
-            <ProfilePhoto background={image} />
+           <CardInner>
+                <NameWrapper>
+                    <h4>
+                        {name}
+                    </h4>
+                    <h5>
+                        {title}
+                    </h5>
+                </NameWrapper>
+                <HiddenWrapper>
+                    <BulletWrapper> One </BulletWrapper>
+                    <BulletWrapper> Two </BulletWrapper>
+                    <BulletWrapper> Three </BulletWrapper>
+                </HiddenWrapper>
+                
+                <ProfilePhoto background={image} />
+           </CardInner>
         </StyledCard>
     );
 };

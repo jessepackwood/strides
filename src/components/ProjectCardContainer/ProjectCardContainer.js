@@ -32,7 +32,16 @@ class ProjectCardContainer extends React.Component {
     render() {
 
         const cardsToDisplay = projects.map( (project, index) => {
-                return <CardWrapper><ProjectCard title={project.title} text={project.text} image={project.image} subtitle={project.subtitle} position={index % 2 ? 'auto' : '0'} link={project.link} /></CardWrapper>
+                return <CardWrapper>
+                            <ProjectCard 
+                                title={project.title} 
+                                text={project.text} 
+                                image={project.image} 
+                                subtitle={project.subtitle} 
+                                position={index % 2 ? 'auto' : '0'} 
+                                link={project.link} 
+                            />
+                       </CardWrapper>
             })
         return  (
             <ProjectsWrapper>
