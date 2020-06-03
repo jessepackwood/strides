@@ -19,7 +19,7 @@ const StyledBorder = styled.div`
     width: 50px;
 `
 
-const ActionLink = ({text, url}) => (
+const ActionLink = ({text, url, styles}) => (
     <div>
         <StyledLink to={url}>
             {text}

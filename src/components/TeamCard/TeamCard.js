@@ -7,59 +7,52 @@ const StyledCard = styled.div`
     position: relative;
     color: #fff;
     background: #212231;
-    width: 288px;
-    /* height: 341px; */
+    width: calc(50% - 24px);
+    height: 368px;
     background: #212231;
     box-shadow: 0px 4px 10px #000000;
     border-radius: 0px 30px 30px 30px;
-    margin: 25px 25px 25px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    margin: 24px 24px 0 0px;
+
+    &:before{
+        content: "";
+        left: -10px;
+        top: -10px;
+        background-color: #66E0B9;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+    }
+`
+
+const CardInner = styled.div`
+    overflow: hidden;
+    height: 100%;
+    border-bottom-left-radius: 30px;
 `
 
 const NameWrapper = styled.div`
-    padding: 10px;
+    padding: 24px;
+    position: relative;
+
+    h4{
+        font-size: 24px;
+        margin: 0;
+    }
+
+    h5{
+        margin: 8px 0 0; 
+    }
 `
 
 const ProfilePhoto = styled.div`
-    height: 220px;
+    height: 300px;
     width: 100%;
     background-position: center;
     background-size: cover;
     border-radius: 0px 30px 0px 30px;
     background-image: ${props => `url(${props.background})`};
-`
-
-const CornerDot = styled.img.attrs({
-    src: GreenDot
-})`
-    height: 15px;
-    width: 15px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: -5px;
-    margin-left: -5px;
-`
-
-const StyledTitle = styled.h4`
-    color: #fff;
-    font-family: Frank Ruhl Libre;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 28px;
-    margin: 0;
-`
-
-const StyledSubtitle = styled(StyledTitle)`
-    font-family: Muli;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 15px;
-    margin-top: 5px;
 `
 
 const HiddenWrapper = styled.ul`
@@ -69,42 +62,28 @@ const HiddenWrapper = styled.ul`
 const BulletWrapper = styled.li`
 `
 
-class TeamCard extends React.Component {
-
-    state = {
-        expanded: false
-    }
-
-    expandCard = () => {
-        console.log('expand')
-        this.setState({ expanded: !this.state.expanded })
-    }
-
-    render () {
-        return (
-            <StyledCard >
-                <CornerDot onClick={this.expandCard} />
+const TeamCard = ({name, title, image}) => {
+    return (
+        <StyledCard >
+           <CardInner>
                 <NameWrapper>
-                    <StyledTitle>
-                        {this.props.name}
-                    </StyledTitle>
-                    <StyledSubtitle>
-                        {this.props.title}
-                    </StyledSubtitle>
+                    <h4>
+                        {name}
+                    </h4>
+                    <h5>
+                        {title}
+                    </h5>
                 </NameWrapper>
-                { !!this.state.expanded &&
-                    <HiddenWrapper>
-                        <BulletWrapper> One </BulletWrapper>
-                        <BulletWrapper> Two </BulletWrapper>
-                        <BulletWrapper> Three </BulletWrapper>
-                    </HiddenWrapper>
-                }
-
+                <HiddenWrapper>
+                    <BulletWrapper> One </BulletWrapper>
+                    <BulletWrapper> Two </BulletWrapper>
+                    <BulletWrapper> Three </BulletWrapper>
+                </HiddenWrapper>
                 
-                <ProfilePhoto background={this.props.image} />
-            </StyledCard>
-        );
-    }
+                <ProfilePhoto background={image} />
+           </CardInner>
+        </StyledCard>
+    );
 };
 
 export default TeamCard;

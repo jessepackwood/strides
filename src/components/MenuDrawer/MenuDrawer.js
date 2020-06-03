@@ -6,19 +6,39 @@ import StyledHamburger from '../../components/Hamburger/Hamburger'
 import { Link } from 'react-router-dom'
 
 const StyledDrawer = styled.div`
-    max-width: 760px;
-    position: absolute;
-    top: 15px;
-    right: 25px;
+    position: fixed;
+    top: 0;
     color: #fff;
-    background-color: ${props => props.theme.dark.bg};
-    border: 1px solid ${props => props.theme.dark.green};
-    padding: 20px;
+    background-color: #08090F;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: auto;
+
+    @media(max-width: 768px){
+        padding: 32px 32px 64px;
+    }
+`
+
+const DrawerInner = styled.div`
+    max-width: 760px;
+    width: 100%;
+    margin:0 auto;
 `
 
 const CloseBtnWrapper = styled.div`
     width: 100%;
     display: flex;
+`
+
+const Spacer = styled.div`
+    height: 32px;
+`
+
+const SpacerLarge = styled.div`
+    height: 64px;
 `
 
 const MenuTitle = styled.h2`
@@ -52,40 +72,48 @@ const MenuDrawer = ({toggleMenu}) => {
     return (
         <ThemeProvider theme={globalTheme}>
             <StyledDrawer>
-                <CloseBtnWrapper>
-                    <StyledHamburger toggleMenu={toggleMenu}>
-                        Close
-                    </StyledHamburger>
-                </CloseBtnWrapper>
-                <MenuTitle>
-                    Work
-                </MenuTitle>
-                <StyledLink to='/work/the-daily-shift'>
-                    <MenuItem onClick={toggleMenu}>
-                        The Daily Shift
-                    </MenuItem>
-                </StyledLink>
-                <StyledLink to='/work/blossom'>
-                    <MenuItem onClick={toggleMenu}>
-                        Blossom
-                    </MenuItem>
-                </StyledLink>
-                <StyledLink to='/work/whole-body-challenge'>
-                    <MenuItem onClick={toggleMenu}>
-                        Whole Body Challenge
-                    </MenuItem>
-                </StyledLink>
-                <StyledLink to='/work/next-level-sports'>
-                    <MenuItem onClick={toggleMenu}>
-                        Next Level Sports
-                    </MenuItem>
-                </StyledLink>
-                <StyledLink to='/work/starv'>
-                    <MenuItem onClick={toggleMenu}>
-                        Starv
-                    </MenuItem>
-                </StyledLink>
-                <ActionLink text='Contact' url='/contact' />
+                <DrawerInner>
+                    <CloseBtnWrapper>
+                        <StyledHamburger toggleMenu={toggleMenu}>
+                            Close
+                        </StyledHamburger>
+                    </CloseBtnWrapper>
+                    <MenuTitle>
+                        Work
+                    </MenuTitle>
+                    <StyledLink to='/work/the-daily-shift'>
+                        <MenuItem onClick={toggleMenu}>
+                            The Daily Shift
+                        </MenuItem>
+                    </StyledLink>
+                    <StyledLink to='/work/blossom'>
+                        <MenuItem onClick={toggleMenu}>
+                            Blossom
+                        </MenuItem>
+                    </StyledLink>
+                    <StyledLink to='/work/whole-body-challenge'>
+                        <MenuItem onClick={toggleMenu}>
+                            Whole Body Challenge
+                        </MenuItem>
+                    </StyledLink>
+                    <StyledLink to='/work/next-level-sports'>
+                        <MenuItem onClick={toggleMenu}>
+                            Next Level Sports
+                        </MenuItem>
+                    </StyledLink>
+                    <StyledLink to='/work/starv'>
+                        <MenuItem onClick={toggleMenu}>
+                            Starv
+                        </MenuItem>
+                    </StyledLink>
+                    <SpacerLarge />
+                    <MenuTitle>
+                        Contact
+                    </MenuTitle>
+                    <ActionLink text='info@strides.com' url='mailto:info@strides.com' />
+                    <Spacer />
+                    <ActionLink text='(208) 227-4479' url='tel:(208) 227-4479' />
+                </DrawerInner>
             </StyledDrawer>
         </ThemeProvider>
 
