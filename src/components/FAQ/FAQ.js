@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 import ActionLink from '../ActionLink/ActionLink'
 
 const Wrapper = styled.div`
-    /* display: flex; */
-    /* padding: 0 50px; */
-    /* height: 600px; */
     display: flex;
-    /* flex-direction: column; */
     justify-content: space-between;
     padding-bottom: 40px;
     max-width: 760px;
@@ -91,9 +87,9 @@ const FAQ = () => (
         </div>
         <div>
             <Spacer />
-            <ActionLink text='info@strides.com' />
+            <ActionLink to='' text='info@strides.dev' />
             <Spacer />
-            <ActionLink text='(208) 227-4479' />
+            <ActionLink to='' text='(208) 227-4479' />
         </div>
     </Wrapper>
 )

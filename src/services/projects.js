@@ -33,7 +33,8 @@ export const projects = {
         timeline: '8 weeks',
         problem: 'During our busy schedules we often times forget to spend time on ourselves. The daily shifts was searching for a way to prompt someone to reconnect with their mind, body, and soul in a positive way.',
         solution: 'After extensive research the daily shifts built and app that prompts you at the three most important times if the day, morning, afternoon, and night. Asking you to do things like mediate, say what you aregreat full  for, and invites you to do things you might not normal so, like talk to someone you don’t know. All of which help you stay in tune with your mind and body.',
-        images: [ shift1, shift2, shift3, shift4, shift5 ]
+        images: [ shift1, shift2, shift3, shift4, shift5 ],
+        liveLink: ''
     },
     wholeBodyChallenge: {
         title: 'Whole Body Challenge',
@@ -41,7 +42,8 @@ export const projects = {
         timeline: '8 weeks',
         problem: 'New U needed a custom app to run a weight-loss contest for their subscribers. It needed a clean UI and implementation of a randomly generated fitness word for them to write down when they take photos so cheating the system would be more difficult.',
         solution: 'So for 8 weeks, they ran the Whole Body Challenge web app. It allowed users to upload photos once a week and submit their current weight to be tracked throughout the competition. The app shipped complete with both a mobile-first user interface and a backend admin dashboard.',
-        images: [ wbc1, wbc2, wbc3, wbc4, wbc5 ]
+        images: [ wbc1, wbc2, wbc3, wbc4, wbc5 ],
+        liveLink: 'app.wholebodychallenge.com'
     },
     blossom: {
         title: 'Blossom',
@@ -49,7 +51,8 @@ export const projects = {
         timeline: '8 weeks',
         problem: 'In a time where social media connects everyone we’ve never been so disconnect from each other. Things like snapchat or instagram allow people to share memories, while tinder connects you with others. This was not blossom’s goal.',
         solution: 'Blossom created a platform that allows people to plan and connect in real life with ease. By creating a platform that makes meeting people near you easy it also opens the doors for be able to share moments with those people over and over.',
-        images: [ blossom1, blossom2, blossom3, blossom4, blossom5 ]
+        images: [ blossom1, blossom2, blossom3, blossom4, blossom5 ],
+        liveLink: ''
     },
     starv: {
         title: 'Starv',
@@ -57,7 +60,7 @@ export const projects = {
         timeline: '4 weeks',
         problem: 'Finding local talent, let alone hiring local talent, is not easy. Starv is a network for everyday people to find artists, musicians, dancers, and performers of all varieties to book for parties or local events ',
         solution: 'We designed both a native and web app for the local talent marketplace. Whether you have talent or need to hire someone talented, our design makes it simple to sign up. Once you have an account, the user experience differs based on the type of account you created. Talent can see a schedule of their bookings and customers can browse local talent.',
-        images: [ starv1, starv2, starv3, starv4, starv5 ]
+        images: [ starv1, starv2, starv3, starv4, starv5 ],
     },
     nextLevelSports: {
         title: 'Next Level Sports',
@@ -65,6 +68,7 @@ export const projects = {
         timeline: '12 weeks',
         problem: 'Coaches and athletes currently have no elegant solution for tracking player statistics and video playback. Everything out there requires rigorous onboarding and archaic design, NLS is looking to fix that.',
         solution: 'Currently under development we have created a mobile application that allows coaches and players to records matches and have instant access to player videos and stats.',
-        images: [ nls1, nls2, nls3, nls4, nls5 ]
+        images: [ nls1, nls2, nls3, nls4, nls5 ],
+        liveLink: ''
     }
 }

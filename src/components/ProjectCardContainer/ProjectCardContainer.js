@@ -43,6 +43,7 @@ class ProjectCardContainer extends React.Component {
                             />
                        </CardWrapper>
             })
+
         return  (
             <ProjectsWrapper>
                 {cardsToDisplay}

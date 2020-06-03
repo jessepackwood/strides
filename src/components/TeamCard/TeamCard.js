@@ -1,4 +1,5 @@
 import React from 'react';
+import { Transition } from 'react-transition-group';
 import styled from 'styled-components'
 import GreenDot from '../../assets/green-circle.png'
 
@@ -30,6 +31,7 @@ const CardInner = styled.div`
     height: 100%;
     border-bottom-left-radius: 30px;
 `
+
 const NameWrapper = styled.div`
     padding: 24px;
     position: relative;
@@ -54,7 +56,7 @@ const ProfilePhoto = styled.div`
 `
 
 const HiddenWrapper = styled.ul`
-    display: none;
+    margin-top: 0;
     list-style-image: GreenDot;
 `
 const BulletWrapper = styled.li`

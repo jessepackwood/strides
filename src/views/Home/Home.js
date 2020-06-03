@@ -1,8 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styled, { ThemeProvider } from 'styled-components'
 import ActionLink from '../../components/ActionLink/ActionLink'
-import starOne from '../../assets/Star-1.png'
 import ProjectCardContainer from '../../components/ProjectCardContainer/ProjectCardContainer'
 import TeamContainer from '../../components/TeamContainer/TeamContainer'
 import Header from '../../components/Header/Header'
@@ -72,15 +70,6 @@ const AboutWrapper = styled.div`
     align-items: flex-start;
 `
 
-const StyledPaintSpot = styled.img`
-    height: 496px;
-    width: 499;
-    position: absolute;
-    z-index: -1;
-`
-const Spacer = styled.div`
-    height: 300px;
-`
 const SmallSpacer = styled.div`
     height: 30px;
 `
