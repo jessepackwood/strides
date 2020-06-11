@@ -127,8 +127,8 @@ const MenuDrawer = ({toggleMenu}) => {
                             Upwork
                         </MenuItem>
                     </StyledExternalLink>
-                    <StyledExternalLink href='https://www.upwork.com/ag/strides/'>
-                        <MenuItem href='linkedin.com/company/strides-dev '>
+                    <StyledExternalLink href='linkedin.com/company/strides-dev'>
+                        <MenuItem>
                             LinkedIn
                         </MenuItem>
                     </StyledExternalLink>
