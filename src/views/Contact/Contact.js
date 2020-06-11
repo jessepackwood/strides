@@ -25,7 +25,7 @@ const StyledTitle = styled.h1`
     padding: 0 50px;
     @media (max-width: 500px) {
         padding: 0;
-        width: 300px;
+        /* width: 300px; */
         margin: 0 auto;
     }
 `
@@ -62,7 +62,7 @@ const StyledInput = styled.input`
         border-bottom: 2px solid #66E0B9;
     }
     @media (max-width: 500px) {
-        width: 300px;
+        /* width: 300px; */
     }
 `
 
@@ -85,7 +85,7 @@ const StyledTextArea = styled.textarea`
         border-bottom: 2px solid #66E0B9;
     }
     @media (max-width: 500px) {
-        width: 300px;
+        /* width: 300px; */
     }
 `
 const StyledSubmitBtn = styled.input`
@@ -100,6 +100,7 @@ const StyledSubmitBtn = styled.input`
     color: #66E0B9;
     text-decoration: none;
     border: none;
+    padding: 0;
     :hover {
         cursor: pointer;
     }
@@ -109,7 +110,7 @@ const StyledSubmitBtn = styled.input`
     }
 `
 const GreenLine = styled.div`
-    margin: 10px 0 0 7px;
+    margin: 10px 0;
     width: 50px;
     border-bottom: 4px solid #66E0B9;
     @media (max-width: 500px) {
