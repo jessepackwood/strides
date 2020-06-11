@@ -112,6 +112,14 @@ const GreenLine = styled.div`
     }
 `
 
+const Wrapper = styled.div`
+    width: 100%;
+    margin: 0 auto;
+    @media (max-width: 500px) {
+        width: 320px;
+    }
+`
+
 export default class Contact extends Component {
 
         state = { 
@@ -168,7 +176,7 @@ export default class Contact extends Component {
                 <Header />
                 <ContactWrapper>
                 {!this.state.sentEmail &&
-                <div>
+                <Wrapper>
                     <StyledTitle>
                         Drop us a line...
                     </StyledTitle>
@@ -187,7 +195,7 @@ export default class Contact extends Component {
                         <StyledSubmitBtn type='button' value='Send Message' onClick={this.handleSubmit} />
                         <GreenLine />
                     </StyledForm>
-                </div>
+                </Wrapper>
                 }
                 {this.state.sentEmail &&
                     <StyledResponse>
