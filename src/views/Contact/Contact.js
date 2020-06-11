@@ -39,8 +39,8 @@ const StyledForm = styled.form`
     padding: 25px 50px;
     @media (max-width: 500px) {
         padding: 0;
-        width: 320px;
-        margin: 0 auto;
+        width: 100%;
+        /* margin: 0 auto; */
     }
 `
 
@@ -116,7 +116,7 @@ const Wrapper = styled.div`
     width: 100%;
     margin: 0 auto;
     @media (max-width: 500px) {
-        width: 320px;
+        width: 300px;
     }
 `
 
