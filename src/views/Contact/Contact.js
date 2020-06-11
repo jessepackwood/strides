@@ -23,6 +23,9 @@ const StyledTitle = styled.h1`
     color: #FFFFFF;
     margin: 0;
     padding: 0 50px;
+    @media (max-width: 500px) {
+        padding: 0 25px;
+    }
 `
 
 const StyledResponse = styled(StyledTitle)`
@@ -32,6 +35,9 @@ const StyledResponse = styled(StyledTitle)`
 
 const StyledForm = styled.form`
     padding: 25px 50px;
+    @media (max-width: 500px) {
+        padding: 25px;
+    }
 `
 
 const StyledInput = styled.input`
