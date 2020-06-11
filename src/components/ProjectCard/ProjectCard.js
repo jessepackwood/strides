@@ -8,7 +8,6 @@ const StyledCard = styled.div`
     margin-left: ${props => props.position};
     position: relative;
     margin-top: 80px;
-
     &:before{
         content: "";
         width: 20px;
@@ -22,14 +21,14 @@ const StyledCard = styled.div`
     }
 `
 
-const CardConentWrapper = styled.div`
+const CardContentWrapper = styled.div`
     display: flex;
     overflow: hidden;
     height: 100%;
     position: relative;
     max-width: 504px;
     color: #fff;
-    height: auto;
+    height: 500px;
     background: #212231;
     box-shadow: 0px 4px 10px #000000;
     border-radius: 0px 30px 30px 30px;
@@ -44,6 +43,7 @@ const CardConentWrapper = styled.div`
         flex-direction: column;
         width: 100%;
         padding: 24px;
+        height: 400px;
     };
 `
 const TextWrapper = styled.div`
@@ -128,7 +128,7 @@ class ProjectCard extends React.Component {
             return (
                 
             <StyledCard position={this.props.position}>
-                <CardConentWrapper>
+                <CardContentWrapper>
                     <TextWrapper>
                         <StyledTitle>
                             {this.props.title}
@@ -150,7 +150,7 @@ class ProjectCard extends React.Component {
                             </StyledLink>
                         </ImageWrapper>
                     
-                </CardConentWrapper>
+                </CardContentWrapper>
             </StyledCard>
             
             )
