@@ -25,7 +25,7 @@ const StyledDrawer = styled.div`
 const DrawerInner = styled.div`
     max-width: 760px;
     width: 100%;
-    margin:0 auto;
+    margin: 0 auto;
 `
 
 const CloseBtnWrapper = styled.div`
@@ -43,7 +43,7 @@ const SpacerLarge = styled.div`
 
 const MenuTitle = styled.h2`
     font-family: ${props => props.theme.font.frank};
-    margin-top: 0;
+    margin: 0 0 25px 0;
     font-size: 40px;
     color: #fff;
 `
@@ -61,6 +61,7 @@ const MenuItem = styled.h4`
     line-height: 25px;
     text-decoration: none;
     color: #fff;
+    margin-bottom: 20px;
     :hover {
         cursor: pointer;
         text-decoration: underline;

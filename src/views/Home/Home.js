@@ -15,20 +15,18 @@ const HomeWrapper = styled.div`
     margin: 0 auto;
 
     @media (max-width: 500px) {
-        padding: 0 32px 100px;
+        padding: 100px 0;
     }     
 `
 
 const BannerWrapper = styled.div`
     height: calc(100vh - 72px);
     margin: 0 auto;
-    position: relative;
-`
-
-const BannerContentWrapper = styled.div`
-    position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
+    margin-top: 200px;
+    @media (max-width: 500px) {
+        margin-top: 50px;
+        padding: 0 25px;
+    }
 `
 
 const StyledHomeTitle = styled.h1`
@@ -51,6 +49,9 @@ const StyledH2 = styled.h2`
     color: #FFFFFF;
     margin: 0;
     padding: 0;
+    @media (max-width: 500px) {
+        padding: 0 25px;
+    }
 `
 const StyledSubtitle = styled.p`
     color: #fff;
@@ -60,6 +61,9 @@ const StyledSubtitle = styled.p`
     font-size: 20px;
     line-height: 28px;
     margin: 16px 0;
+    @media (max-width: 500px) {
+        padding: 0 25px;
+    }
 `
 
 const AboutWrapper = styled.div`
@@ -76,6 +80,9 @@ const SmallSpacer = styled.div`
 
 const LinkWrapper = styled.div`
     margin: 16px 0 0;
+    @media (max-width: 500px) {
+        padding: 0 25px;
+    }
 `
 
 const Home = () => (
@@ -83,14 +90,11 @@ const Home = () => (
         <Header />
         <HomeWrapper>
         <BannerWrapper>
-            <BannerContentWrapper>
                 <StyledHomeTitle>
                     We turn your ideas into apps
                 </StyledHomeTitle>
-                <LinkWrapper>
                     <ActionLink text='Get A Quote' url='/contact'/>
-                </LinkWrapper>
-            </BannerContentWrapper>
+                
         </BannerWrapper>
         <StyledH2>
             Our work
@@ -105,11 +109,9 @@ const Home = () => (
             <StyledH2>
                 Why us?
             </StyledH2>
-            <LinkWrapper>
             <StyledSubtitle>
                 You deserve better than a one-size-fits-all option. Our agency's capabilities are focused around one thing – creating amazing apps. 
             </StyledSubtitle>
-            </LinkWrapper>
             <LinkWrapper>
                 <ActionLink text='Contact us' url='/contact' />
             </LinkWrapper>

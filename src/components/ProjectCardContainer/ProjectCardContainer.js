@@ -20,6 +20,9 @@ const ProjectsWrapper = styled.div`
     margin: 60px auto 50px;
     background: transparent;
     margin-top: -40px;
+    @media (max-width: 500px) {
+        padding: 0 25px;
+    }
 `
 
 const CardWrapper = styled.div`

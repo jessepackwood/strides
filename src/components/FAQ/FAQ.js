@@ -31,6 +31,9 @@ const QuestionWrapper = styled.div`
     color: #FFFFFF;
     max-width: 480px;
     display: block;
+    @media (max-width: 500px) {
+        padding: 0 25px;
+    }
 `
 const AnswerWrapper = styled.div`
     display: block;
@@ -43,10 +46,19 @@ const AnswerWrapper = styled.div`
     line-height: 20px;
     color: #858585;
     width: 311px;
+    @media (max-width: 500px) {
+        padding: 0 25px;
+    }
 `
 
 const Spacer = styled.div`
     height: 20px;
+`
+
+const LinkWrapper = styled.div`
+        @media (max-width: 500px) {
+        padding: 0 25px;
+    }
 `
 
 const FAQ = () => (
@@ -87,9 +99,13 @@ const FAQ = () => (
         </div>
         <div>
             <Spacer />
-            <ActionLink to='' text='info@strides.dev' />
+            <LinkWrapper>
+                <ActionLink to='' text='info@strides.dev' />
+            </LinkWrapper>
             <Spacer />
-            <ActionLink to='' text='(208) 227-4479' />
+            <LinkWrapper>
+                <ActionLink to='' text='(208) 227-4479' />
+            </LinkWrapper>
         </div>
     </Wrapper>
 )

@@ -19,13 +19,16 @@ const StyledBorder = styled.div`
     width: 50px;
 `
 
+const Wrapper = styled.div`
+`
+
 const ActionLink = ({text, url, styles}) => (
-    <div>
+    <Wrapper>
         <StyledLink to={url}>
             {text}
         </StyledLink>
         <StyledBorder />
-    </div>
+    </Wrapper>
 )
 
 export default ActionLink

@@ -18,8 +18,16 @@ const TeamWrapper = styled.div`
     /* justify-content: space-between; */
     flex-wrap: wrap;
     max-width: 760px;
-    margin: 24px auto 80px;
+    margin: 25px auto 80px;
     padding: 0;
+    @media (max-width: 500px) {
+        margin: 25px auto 200px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        width: 320px;
+    }
 `
 
 class TeamContainer extends React.Component { 

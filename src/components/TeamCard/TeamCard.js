@@ -7,14 +7,14 @@ const StyledCard = styled.div`
     position: relative;
     color: #fff;
     background: #212231;
-    width: calc(50% - 24px);
+    width: 320px;
     height: 368px;
     background: #212231;
     box-shadow: 0px 4px 10px #000000;
     border-radius: 0px 30px 30px 30px;
     margin: 24px 24px 0 0px;
 
-    &:before{
+    /* &:before{
         content: "";
         left: -10px;
         top: -10px;
@@ -23,7 +23,7 @@ const StyledCard = styled.div`
         width: 20px;
         height: 20px;
         position: absolute;
-    }
+    } */
 `
 
 const CardInner = styled.div`
