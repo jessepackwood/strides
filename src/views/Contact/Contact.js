@@ -61,6 +61,9 @@ const StyledInput = styled.input`
     :focus {
         border-bottom: 2px solid #66E0B9;
     }
+    @media (max-width: 500px) {
+        width: 320px;
+    }
 `
 
 const StyledTextArea = styled.textarea`
@@ -80,6 +83,9 @@ const StyledTextArea = styled.textarea`
 
     :focus {
         border-bottom: 2px solid #66E0B9;
+    }
+    @media (max-width: 500px) {
+        width: 320px;
     }
 `
 const StyledSubmitBtn = styled.input`
