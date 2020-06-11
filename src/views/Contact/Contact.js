@@ -25,7 +25,7 @@ const StyledTitle = styled.h1`
     padding: 0 50px;
     @media (max-width: 500px) {
         padding: 0;
-        width: 80%;
+        width: 320px;
         margin: 0 auto;
     }
 `
@@ -39,7 +39,7 @@ const StyledForm = styled.form`
     padding: 25px 50px;
     @media (max-width: 500px) {
         padding: 0;
-        width: 80%;
+        width: 320px;
         margin: 0 auto;
     }
 `
