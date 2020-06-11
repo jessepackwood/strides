@@ -74,11 +74,6 @@ const TeamCard = ({name, title, image}) => {
                         {title}
                     </h5>
                 </NameWrapper>
-                <HiddenWrapper>
-                    <BulletWrapper> One </BulletWrapper>
-                    <BulletWrapper> Two </BulletWrapper>
-                    <BulletWrapper> Three </BulletWrapper>
-                </HiddenWrapper>
                 
                 <ProfilePhoto background={image} />
            </CardInner>
