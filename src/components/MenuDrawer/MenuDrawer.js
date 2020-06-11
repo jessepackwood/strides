@@ -55,6 +55,14 @@ const StyledLink = styled(Link)`
     }
 `
 
+const StyledExternalLink = styled.a`
+    text-decoration: none;
+    :hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+`
+
 const MenuItem = styled.h4`
     font-family: ${props => props.theme.font.muli};
     font-size: 20px;
@@ -65,6 +73,9 @@ const MenuItem = styled.h4`
     :hover {
         cursor: pointer;
         text-decoration: underline;
+    }
+    :visited {
+        color: ${props => props.theme.dark.bg}
     }
 `
 
@@ -107,7 +118,20 @@ const MenuDrawer = ({toggleMenu}) => {
                             Starv
                         </MenuItem>
                     </StyledLink>
-                    <SpacerLarge />
+                    
+                    <MenuTitle>
+                        Connect
+                    </MenuTitle>
+                    <StyledExternalLink href='https://www.upwork.com/ag/strides/'>
+                        <MenuItem>
+                            Upwork
+                        </MenuItem>
+                    </StyledExternalLink>
+                    <StyledExternalLink href='https://www.upwork.com/ag/strides/'>
+                        <MenuItem href='linkedin.com/company/strides-dev '>
+                            LinkedIn
+                        </MenuItem>
+                    </StyledExternalLink>
                     <MenuTitle>
                         Contact
                     </MenuTitle>
