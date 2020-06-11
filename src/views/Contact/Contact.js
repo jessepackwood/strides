@@ -25,7 +25,7 @@ const StyledTitle = styled.h1`
     padding: 0 50px;
     @media (max-width: 500px) {
         padding: 0;
-        width: 320px;
+        width: 300px;
         margin: 0 auto;
     }
 `
@@ -62,7 +62,7 @@ const StyledInput = styled.input`
         border-bottom: 2px solid #66E0B9;
     }
     @media (max-width: 500px) {
-        width: 320px;
+        width: 300px;
     }
 `
 
@@ -85,7 +85,7 @@ const StyledTextArea = styled.textarea`
         border-bottom: 2px solid #66E0B9;
     }
     @media (max-width: 500px) {
-        width: 320px;
+        width: 300px;
     }
 `
 const StyledSubmitBtn = styled.input`
