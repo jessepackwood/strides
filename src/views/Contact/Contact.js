@@ -88,13 +88,18 @@ const StyledSubmitBtn = styled.input`
         cursor: pointer;
     }
     @media (max-width: 500px) {
-
+        padding: 0;
+        margin: 0;
     }
 `
 const GreenLine = styled.div`
     margin: 10px 0 0 7px;
     width: 50px;
     border-bottom: 4px solid #66E0B9;
+    @media (max-width: 500px) {
+        padding: 0;
+        margin: 10px 0;
+    }
 `
 
 export default class Contact extends Component {
