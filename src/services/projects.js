@@ -23,7 +23,10 @@ import nls2 from '../assets/NLS/NLS2.png'
 import nls3 from '../assets/NLS/NLS3.png'
 import nls4 from '../assets/NLS/NLS4.png'
 import nls5 from '../assets/NLS/NLS5.png'
-
+import equine1 from '../assets/equine/Equine-01.png'
+import equine2 from '../assets/equine/Equine-02.png'
+import equine3 from '../assets/equine/Equine-03.png'
+import equine4 from '../assets/equine/Equine-04.png'
 
 
 export const projects = {
@@ -70,5 +73,13 @@ export const projects = {
         solution: 'Currently under development we have created a mobile application that allows coaches and players to records matches and have instant access to player videos and stats.',
         images: [ nls1, nls2, nls3, nls4, nls5 ],
         liveLink: ''
+    },
+    equineTrader: {
+        title: 'Equine Trader',
+        work: 'Dev + Design',
+        timeline: '',
+        problem: 'Save a horse',
+        solution: 'Ride a cowboy',
+        images: [ equine1, equine2, equine3, equine4 ]
     }
 }

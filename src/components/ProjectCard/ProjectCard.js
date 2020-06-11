@@ -143,11 +143,13 @@ class ProjectCard extends React.Component {
                             <ActionLink text='Read more' url={this.props.link} />
                         </LinkWrapper>
                     </TextWrapper>
-                    <StyledLink to={this.props.link}>
+                    
                         <ImageWrapper>
+                        <StyledLink to={this.props.link}>
                             <StyledImg src={this.props.image} alt='phone display' />
+                            </StyledLink>
                         </ImageWrapper>
-                    </StyledLink>
+                    
                 </CardConentWrapper>
             </StyledCard>
             

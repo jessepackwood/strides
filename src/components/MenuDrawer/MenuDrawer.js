@@ -118,7 +118,11 @@ const MenuDrawer = ({toggleMenu}) => {
                             Starv
                         </MenuItem>
                     </StyledLink>
-                    
+                    <StyledLink to='/work/equine-trader'>
+                        <MenuItem onClick={toggleMenu}>
+                            Equine Trader
+                        </MenuItem>
+                    </StyledLink>
                     <MenuTitle>
                         Connect
                     </MenuTitle>

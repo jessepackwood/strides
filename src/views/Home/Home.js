@@ -93,17 +93,15 @@ const Home = () => (
                 <StyledHomeTitle>
                     We turn your ideas into apps
                 </StyledHomeTitle>
-                    <ActionLink text='Get A Quote' url='/contact'/>
-                
+                <ActionLink text='Get A Quote' url='/contact'/>
         </BannerWrapper>
         <StyledH2>
             Our work
         </StyledH2>
-        <LinkWrapper>
             <StyledSubtitle>
                 Check out a few of our recent projects
             </StyledSubtitle>
-        </LinkWrapper>
+
         <ProjectCardContainer />
         <AboutWrapper>
             <StyledH2>

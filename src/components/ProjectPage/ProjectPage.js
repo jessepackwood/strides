@@ -2,13 +2,13 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components'
 
 const StyledTitle = styled.h1`
-font-family: Frank Ruhl Libre;
-font-style: normal;
-font-weight: 900;
-font-size: 58px;
-line-height: 75px;
-color: #FFFFFF;
-margin: 0;
+    font-family: Frank Ruhl Libre;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 58px;
+    line-height: 75px;
+    color: #FFFFFF;
+    margin: 0;
 `
 
 const StyledSubtitle = styled(StyledTitle)`
@@ -24,6 +24,7 @@ const StyledH4 = styled.h4`
 `
 
 const ImageWrapper = styled.div`
+    margin: 35px 0px;
     display: flex;
     max-width: 760px;
     overflow-x: scroll;
@@ -32,6 +33,7 @@ const ImageWrapper = styled.div`
 
 const StyledImage = styled.img`
     height: 517px;
+    margin-right: 35px;
 `
 const StyledText = styled.p`
     font-family: Frank Ruhl Libre;
@@ -42,9 +44,15 @@ const StyledText = styled.p`
     color: #FFFFFF;
 `
 
+const Wrapper = styled.div`
+    margin-bottom: 25px;
+`
+
 const ProjectPage = ({project}) => {
+
+    let imagesToDisplay = project.images.map( image => <StyledImage src={image} alt='project screen' />)
     return (
-        <div>
+        <Wrapper>
             <StyledTitle>
                 {project.title}
             </StyledTitle>
@@ -52,11 +60,8 @@ const ProjectPage = ({project}) => {
                 {project.work}
             </StyledH4>
             <ImageWrapper>
-                <StyledImage src={project.images[0]} alt='project home screen' />
-                <StyledImage src={project.images[1]} alt='project home screen' />
-                <StyledImage src={project.images[2]} alt='project home screen' />
-                <StyledImage src={project.images[3]} alt='project home screen' />
-                <StyledImage src={project.images[4]} alt='project home screen' />
+                
+                { imagesToDisplay }
             </ImageWrapper>
             <StyledSubtitle>
                 Problem
@@ -76,7 +81,7 @@ const ProjectPage = ({project}) => {
             <StyledText>
                 {project.timeline}
             </StyledText> */}
-        </div>
+        </Wrapper>
 
     );
 };
