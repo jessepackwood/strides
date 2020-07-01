@@ -124,19 +124,6 @@ const MenuDrawer = ({toggleMenu}) => {
                         </MenuItem>
                     </StyledLink>
                     <MenuTitle>
-                        Connect
-                    </MenuTitle>
-                    <StyledExternalLink href='https://www.upwork.com/ag/strides/'>
-                        <MenuItem>
-                            Upwork
-                        </MenuItem>
-                    </StyledExternalLink>
-                    <StyledExternalLink href='linkedin.com/company/strides-dev'>
-                        <MenuItem>
-                            LinkedIn
-                        </MenuItem>
-                    </StyledExternalLink>
-                    <MenuTitle>
                         Contact
                     </MenuTitle>
                     <ActionLink text='info@strides.com' url='mailto:info@strides.com' />
