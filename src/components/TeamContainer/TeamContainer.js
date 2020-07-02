@@ -2,15 +2,17 @@ import React from 'react';
 import TeamCard from '../TeamCard/TeamCard'
 import styled from 'styled-components'
 import austin_img from '../../assets/team/austin_img.jpg'
-import jesse_img from '../../assets/team/jesse_img.JPG'
 import brian_img from '../../assets/team/brian_img.png'
+import gaje_image from '../../assets/team/gaje_img.jpeg'
+import drew_img from '../../assets/team/drew_img.jpeg'
 
 
 const team = [
     {name: 'Austin Betzer', title: 'iOS Developer'},
-    {name: 'Jesse Packwood', title: 'Web Developer'},
     {name: 'Andrew Carver', title: 'Android Developer'},
-    {name: 'Brian Clay', title: 'Designer'}
+    { name: 'Brian Clay', title: 'Designer' },
+    { name: 'Gaje Robarge', title: 'Web Developer' },
+    { name: 'Drew Carver', title: 'iOS Developer'}
 ]
 
 const TeamWrapper = styled.div`
@@ -36,8 +38,9 @@ class TeamContainer extends React.Component {
         return  (
             <TeamWrapper>
                 <TeamCard name='Austin Betzer' title='iOS Developer' image={austin_img} />
-                <TeamCard name='Jesse Packwood' title='Web Developer' image={jesse_img} />
                 <TeamCard name='Brian Clay' title='Designer' image={brian_img} />
+                <TeamCard name='Gaje Robarge' title='Web Developer' image={gaje_image} />
+                <TeamCard name='Drew Carver' title='iOS Developer' image={drew_img}/>
             </TeamWrapper>
         )
     }
