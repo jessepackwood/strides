@@ -3,8 +3,8 @@ import TeamCard from '../TeamCard/TeamCard'
 import styled from 'styled-components'
 import austin_img from '../../assets/team/austin_img.jpg'
 import brian_img from '../../assets/team/brian_img.png'
-import gaje_image from '../../assets/team/gaje_img.jpeg'
-import drew_img from '../../assets/team/drew_img.jpeg'
+import gaje_image from '../../assets/team/gaje_img.jpg'
+import drew_img from '../../assets/team/drew_img.jpg'
 import jesse_img from '../../assets/team/jesse_img.JPG'
 
 
