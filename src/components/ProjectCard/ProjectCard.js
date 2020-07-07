@@ -36,7 +36,7 @@ const CardContentWrapper = styled.div`
     box-sizing: border-box;
 
     @media (min-width: 768px){
-        max-width: 65vw;
+        max-width: 700px;
     };
     @media (max-width: 500px) {
         flex-direction: column;
