@@ -36,8 +36,11 @@ const CardContentWrapper = styled.div`
     min-height: 348px;
     box-sizing: border-box;
 
-    @media (min-width: 768px){
+    @media (min-width: 500px){
         max-width: 544px;
+        width: 545px;
+        height: 243px;
+}
     };
     @media (max-width: 500px) {
         flex-direction: column;
@@ -49,6 +52,9 @@ const CardContentWrapper = styled.div`
 const TextWrapper = styled.div`
     width: 50%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `
 const ImageWrapper = styled.div`
     width: 50%;
@@ -60,7 +66,7 @@ const ImageWrapper = styled.div`
 `
 const StyledImg = styled.img`
     height: auto;
-    width: 50%;
+    width: 40%;
     max-width: 290px;
     position: absolute;
     @media (max-width: 500px) {
@@ -98,6 +104,7 @@ const StyledText = styled.p`
     font-size: 20px;
     line-height: 28px;
     color: #FFFFFF;
+    width: 255px;
     @media (max-width: 500px) {
         display: none;
 }
