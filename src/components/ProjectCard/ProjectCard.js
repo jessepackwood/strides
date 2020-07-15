@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import ActionLink from '../../components/ActionLink/ActionLink'
-import GreenDot from '../../assets/green-circle.png'
 import {Link} from 'react-router-dom'
 
 const StyledCard = styled.div`
@@ -28,7 +27,7 @@ const CardContentWrapper = styled.div`
     position: relative;
     max-width: 504px;
     color: #fff;
-    height: 500px;
+    height: 65vh;
     background: #212231;
     box-shadow: 0px 4px 10px #000000;
     border-radius: 0px 30px 30px 30px;
@@ -37,13 +36,15 @@ const CardContentWrapper = styled.div`
     box-sizing: border-box;
 
     @media (min-width: 768px){
-        max-width: 544px;
+        max-width: 700px;
     };
+
+    
     @media (max-width: 500px) {
         flex-direction: column;
         width: 100%;
         padding: 24px;
-        height: 400px;
+        
     };
 `
 const TextWrapper = styled.div`
@@ -53,9 +54,9 @@ const TextWrapper = styled.div`
 const ImageWrapper = styled.div`
     width: 50%;
     height: auto;
-    margin-left: 25px;
     @media (max-width: 500px) {
-        margin: 20px auto 0;
+        margin: inherit;
+        display: flex;
     }
 `
 const StyledImg = styled.img`
@@ -63,6 +64,7 @@ const StyledImg = styled.img`
     width: 50%;
     max-width: 290px;
     position: absolute;
+    margin-left: 3vw;
     @media (max-width: 500px) {
         width: 100%;
         height: auto;
@@ -77,7 +79,6 @@ const StyledTitle = styled.h1`
     font-size: 32px;
     line-height: 41px;
     color: #FFFFFF;
-    margin: 0;
     @media (max-width: 500px) {
         width: 220px;
     }
@@ -89,6 +90,7 @@ const StyledSubtitle = styled.div`
     font-weight: 600;
     font-size: 16px;
     color: #FFFFFF;
+    margin-top: 2vh;
 `
 
 const StyledText = styled.p`
@@ -98,6 +100,8 @@ const StyledText = styled.p`
     font-size: 20px;
     line-height: 28px;
     color: #FFFFFF;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
     @media (max-width: 500px) {
         display: none;
 }
