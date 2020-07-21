@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components'
 
+import AppStoreLogo from '../../assets/apple-store-app-icon.png'
+
 const StyledTitle = styled.h1`
     font-family: Frank Ruhl Libre;
     font-style: normal;
@@ -46,11 +48,20 @@ const StyledText = styled.p`
 
 const Wrapper = styled.div`
     margin-bottom: 25px;
+
+    `
+const AppstoreLogo = styled.img`
+    height: 6vh;
+    margin-top: 3vh;
+
+`
+const AppStoreUrl = styled.a`
+    display: flex;
 `
 
-const ProjectPage = ({project}) => {
+const ProjectPage = ({ project }) => {
 
-    let imagesToDisplay = project.images.map( image => <StyledImage src={image} alt='project screen' />)
+    let imagesToDisplay = project.images.map(image => <StyledImage src={image} alt='project screen' />)
     return (
         <Wrapper>
             <StyledTitle>
@@ -60,8 +71,7 @@ const ProjectPage = ({project}) => {
                 {project.work}
             </StyledH4>
             <ImageWrapper>
-                
-                { imagesToDisplay }
+                {imagesToDisplay}
             </ImageWrapper>
             <StyledSubtitle>
                 Problem
@@ -81,6 +91,10 @@ const ProjectPage = ({project}) => {
             <StyledText>
                 {project.timeline}
             </StyledText> */}
+            <AppStoreUrl href={project.appstoreurl} target="blank">
+                <AppstoreLogo src={AppStoreLogo}>
+                </AppstoreLogo>
+            </AppStoreUrl>
         </Wrapper>
 
     );
