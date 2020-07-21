@@ -78,8 +78,8 @@ export const projects = {
         title: 'Equine Trader',
         work: 'Dev + Design',
         timeline: '',
-        problem: ' Buying and selling horses was a difficult task for just about everyone. Buyers struggled to find horses that weren’t already sold and it was even harder try and refine horses by the traits one might actually be interested in. Selling horses had its own other sets of problems. One of the main concerns sellers mentioned was being unable to find a platform that contained high and low end horses easier to buy and sell.',
-        solution: ' EquineTrader brings refined searches to buyers so they can search horses that match an exact criteria.  While also giving sellers a platform that has a wide range of customers making both high and low end horses easy to buy and sell.',
+        problem: ' Buying and selling horses was a difficult task for just about everyone. Buyers struggled to find horses that weren’t already sold and it was even harder try and refine horses by the traits one might actually Interested in. Selling horses had its own other sets of problems. One of the main concerns sellers mentioned was being unable to find a platform that contained an even amount of both high & low horses.',
+        solution: ' EquineTrader brings refined searches to buyers so they can search horses that match an exact criteria.  While also giving sellers a platform that has a wide range of customers making both high and low end horses easy to buy and sell. ',
         images: [ equine1, equine2, equine3, equine4 ]
     }
 }
