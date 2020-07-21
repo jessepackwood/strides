@@ -5,6 +5,9 @@ import ActionLink from '../../components/ActionLink/ActionLink'
 import StyledHamburger from '../../components/Hamburger/Hamburger'
 import { Link } from 'react-router-dom'
 
+import UpworkLogo from '../../assets/icon-linkedin.png'
+import LinkedinLogo from '../../assets/icon-upwork.png'
+
 import { useState, useEffect } from 'react';
 
 const StyledDrawer = styled.div`
@@ -100,6 +103,18 @@ text-decoration: none;
 margin-right: 5vw;
 `
 
+const LogoWrapper = styled.a`
+
+
+`
+
+const SocialLogo = styled.img`
+height: 50px;
+margin-right: 20px;
+border-radius: 10px;
+
+ `
+
 
 
 
@@ -127,8 +142,12 @@ const MenuDrawer = ({ toggleMenu }) => {
                                     Close
                     </StyledHamburger>
                                 <div>
-                                    <SocialProfile href={'//www.linkedin.com/company/stridesdev'} target="_blank" > Linkedin </SocialProfile>
-                                    <SocialProfile href={'//www.upwork.com/ag/strides/'} target="_blank" > UpWork </SocialProfile>
+                                   <LogoWrapper href={'//www.linkedin.com/company/stridesdev'} target="_blank"  >
+                                    <SocialLogo src={UpworkLogo} alt='upwork logo' />   
+                                    </LogoWrapper>
+                                    <LogoWrapper href={'//www.upwork.com/ag/strides/'} target="_blank">
+                                    <SocialLogo src={LinkedinLogo}  alt="linkedin logo" />
+                                    </LogoWrapper>
                                 </div>
                             </CloseBtnWrapper>
 
@@ -223,8 +242,16 @@ const MenuDrawer = ({ toggleMenu }) => {
                                 <Spacer />
                                 <ActionLink text='(208) 227-4479' url='tel:(208) 227-4479' />
                                 <Spacer />
+                                <LogoWrapper href={'//www.linkedin.com/company/stridesdev'} target="_blank"  >
+                                    <SocialLogo src={UpworkLogo} alt='upwork logo' />   
+                                    </LogoWrapper>
+                                    <LogoWrapper href={'//www.upwork.com/ag/strides/'} target="_blank">
+                                    <SocialLogo src={LinkedinLogo}  alt="linkedin logo" />
+                                    </LogoWrapper>
+                                {/* <StyledLink>
                                 <SocialProfile href={'//www.linkedin.com/company/stridesdev'} target="_blank" > Linkedin </SocialProfile>
-                                <SocialProfile href={'//www.upwork.com/ag/strides/'} target="_blank" > UpWork </SocialProfile>
+                                </StyledLink>
+                                <SocialProfile href={'//www.upwork.com/ag/strides/'} target="_blank" > UpWork </SocialProfile> */}
                             </DrawerInner>
                         </StyledDrawer>
                     </ThemeProvider></div>
