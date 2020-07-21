@@ -47,6 +47,7 @@ const CardContentWrapper = styled.div`
         flex-direction: column;
         width: 100%;
         padding: 24px;
+        height: auto;
         
     };
 `
@@ -74,7 +75,7 @@ const StyledImg = styled.img`
     @media (max-width: 500px) {
         width: 100%;
         height: auto;
-        margin: 16px 0 0;
+        margin: 2vw 20vw 0;
     }
 `
 
