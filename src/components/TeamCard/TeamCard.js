@@ -1,7 +1,10 @@
 import React from 'react';
 import { Transition } from 'react-transition-group';
 import styled from 'styled-components'
-import GreenDot from '../../assets/green-circle.png'
+import GreenDot from '../../assets/green-circle.png';
+
+//React Flippy Test
+import Flippy, { FrontSide, BackSide } from 'react-flippy';
 
 const StyledCard = styled.div`
     position: relative;
@@ -55,29 +58,89 @@ const ProfilePhoto = styled.div`
     background-image: ${props => `url(${props.background})`};
 `
 
+
+
 const HiddenWrapper = styled.ul`
-    margin-top: 0;
-    list-style-image: GreenDot;
-`
-const BulletWrapper = styled.li`
+    margin-top: 3vh;
+    font-size: auto;
+    width: 100%;
+    height: 100%;
+
 `
 
-const TeamCard = ({name, title, image}) => {
+const BulletWrapper = styled.li`
+margin: 0;
+padding: 10px 20px;
+list-style: none;
+background-image: url(${GreenDot});
+background-repeat: no-repeat;
+background-position: left center;
+background-size: 10px;
+`
+
+
+
+const TeamCard = ({ name, title, image, fact1, fact2, fact3, fact4 }) => {
     return (
-        <StyledCard >
-           <CardInner>
-                <NameWrapper>
-                    <h4>
-                        {name}
-                    </h4>
-                    <h5>
-                        {title}
-                    </h5>
-                </NameWrapper>
-                
-                <ProfilePhoto background={image} />
-           </CardInner>
-        </StyledCard>
+
+        <Flippy
+            flipOnHover={true} // default false
+            flipDirection="vertical" // horizontal or vertical
+        // if you pass isFlipped prop component will be controlled component.
+        // and other props, which will go to div
+        >
+            <FrontSide>
+                <StyledCard >
+                    <CardInner>
+                        <NameWrapper>
+                            <h4>
+                                {name}
+                            </h4>
+                            <h5>
+                                {title}
+                            </h5>
+                        </NameWrapper>
+
+                        <ProfilePhoto background={image} />
+                    </CardInner>
+                </StyledCard>
+            </FrontSide>
+            <BackSide
+                style={
+                    {
+                        backgroundColor: '#212231',
+                        borderRadius: '0px 30px 30px 30px',
+                        color: '#fff',
+                        background: '#212231',
+                        width: '320px',
+                        height: '368px',
+                        background: '#212231',
+                        boxShadow: '0px 4px 10px #000000',
+                        margin: '24px 24px 0 0px'
+
+                    }}>
+
+                <CardInner>
+                    <NameWrapper>
+                        <h4>
+                            {name}
+                        </h4>
+                        <h5>
+                            {title}
+                        </h5>
+                        <HiddenWrapper>
+                            <ul>
+                                <BulletWrapper>{fact1}</BulletWrapper>
+                                <BulletWrapper>{fact2}</BulletWrapper>
+                                <BulletWrapper>{fact3}</BulletWrapper>
+                                <BulletWrapper>{fact4}</BulletWrapper>
+                            </ul>
+
+                        </HiddenWrapper>
+                    </NameWrapper>
+                </CardInner>
+            </BackSide>
+        </Flippy>
     );
 };
 
