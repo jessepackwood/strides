@@ -42,11 +42,13 @@ class TeamContainer extends React.Component {
         return (
             <TeamWrapper>
                 <TeamCard name='Austin Betzer' title='iOS Developer' image={austin_img} fact1='4 years of experience' fact2='Taken 6 iOS apps live' fact3='Loves hiking and skiing' fact4='Excited for Mulan' />
+                <TeamCard name='Ben Kimble' title='Backend Developer - AWS Guru' image={ben_img} fact1='Unreal Engine and Unity Game Developer' fact2='C++ Developer' fact3='Blockchain Enthusiast' fact4='Game Music Composer' />
                 <TeamCard name='Brian Clay' title='Designer' image={brian_img} fact1='Can ride a unicycle' fact2='Has done a 300 ft rappel' fact3='One time did a barrel role while tubing' fact4="Is the only designer that doesn't like Photoshop" />
-                <TeamCard name='Drew Carver' title='iOS Developer' image={drew_img} fact1='Have worked on large-scale apps, including for power utility companies' fact2='Drummer' fact3='Private pilot in-training' fact4='Grew up in Orange County, CA' />
                 <TeamCard name='Gaje Robarge' title='Web Developer' image={gaje_image} fact1='3 years of experience' fact2='Has been to 15 Dead & Company shows' fact3='Loves to camp' fact4='Certified Jedi' />
                 <TeamCard name='Jesse Packwood' title='Web Developer' image={jesse_img} fact1='Javascript Wizard' fact2='Motorcycle Enthusiast' fact3='Professional Photographer' fact4='Stay at home dog dad' />
-                <TeamCard name='Ben Kimble' title='Backend Developer - AWS Guru' image={ben_img} fact1='Unreal Engine and Unity Game Developer' fact2='C++ Developer' fact3='Blockchain Enthusiast' fact4='Game Music Composer' />
+                <TeamCard name='Drew Carver' title='iOS Developer' image={drew_img} fact1='Drummer' fact2='Private pilot in-training' fact3='Grew up in Orange County, CA' fact4='Have worked on large-scale apps, including for power utility companies' />
+                
+                
             </TeamWrapper>
         )
     }

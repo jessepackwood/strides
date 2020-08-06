@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Transition } from 'react-transition-group';
 import styled from 'styled-components'
 import GreenDot from '../../assets/green-circle.png';
 
-//React Flippy Testttttttt
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 
 const StyledCard = styled.div`
@@ -77,70 +76,159 @@ background-repeat: no-repeat;
 background-position: left center;
 background-size: 10px;
 `
+function detectMob() {
+    const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i
+    ];
 
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
+}
+console.log(detectMob);
 
 
 const TeamCard = ({ name, title, image, fact1, fact2, fact3, fact4 }) => {
+    const [isDesktop, setDesktop] = useState(window.innerWidth > 700);
+
+    const updateMedia = () => {
+        setDesktop(window.innerWidth > 700);
+    };
+
+
+    useEffect(() => {
+        window.addEventListener("resize", updateMedia);
+        return () => window.removeEventListener("resize", updateMedia);
+    });
     return (
 
-        <Flippy
-            flipOnHover={true} // default false
-            flipDirection="vertical" // horizontal or vertical
-        // if you pass isFlipped prop component will be controlled component.
-        // and other props, which will go to div
-        >
-            <FrontSide>
-                <StyledCard >
-                    <CardInner>
-                        <NameWrapper>
-                            <h4>
-                                {name}
-                            </h4>
-                            <h5>
-                                {title}
-                            </h5>
-                        </NameWrapper>
+        <div>
+            {isDesktop ? (
+                <Flippy
+                    flipOnHover={true} // default false
+                    flipDirection="vertical" // horizontal or vertical
+                // if you pass isFlipped prop component will be controlled component.
+                // and other props, which will go to div
+                >
+                    <FrontSide>
+                        <StyledCard >
+                            <CardInner>
+                                <NameWrapper>
+                                    <h4>
+                                        {name}
+                                    </h4>
+                                    <h5>
+                                        {title}
+                                    </h5>
+                                </NameWrapper>
 
-                        <ProfilePhoto background={image} />
-                    </CardInner>
-                </StyledCard>
-            </FrontSide>
-            <BackSide
-                style={
-                    {
-                        backgroundColor: '#212231',
-                        borderRadius: '0px 30px 30px 30px',
-                        color: '#fff',
-                        background: '#212231',
-                        width: '320px',
-                        height: '368px',
-                        background: '#212231',
-                        boxShadow: '0px 4px 10px #000000',
-                        margin: '24px 24px 0 0px'
+                                <ProfilePhoto background={image} />
+                            </CardInner>
+                        </StyledCard>
+                    </FrontSide>
+                    <BackSide
+                        style={
+                            {
+                                backgroundColor: '#212231',
+                                borderRadius: '0px 30px 30px 30px',
+                                color: '#fff',
+                                background: '#212231',
+                                width: '320px',
+                                height: '368px',
+                                background: '#212231',
+                                boxShadow: '0px 4px 10px #000000',
+                                margin: '24px 24px 0 0px'
 
-                    }}>
+                            }}>
 
-                <CardInner>
-                    <NameWrapper>
-                        <h4>
-                            {name}
-                        </h4>
-                        <h5>
-                            {title}
-                        </h5>
-                        <HiddenWrapper>
-                            <ul>
-                                <BulletWrapper>{fact1}</BulletWrapper>
-                                <BulletWrapper>{fact2}</BulletWrapper>
-                                <BulletWrapper>{fact3}</BulletWrapper>
-                                <BulletWrapper>{fact4}</BulletWrapper>
-                            </ul>
+                        <CardInner>
+                            <NameWrapper>
+                                <h4>
+                                    {name}
+                                </h4>
+                                <h5>
+                                    {title}
+                                </h5>
+                                <HiddenWrapper>
+                                    <ul>
+                                        <BulletWrapper>{fact1}</BulletWrapper>
+                                        <BulletWrapper>{fact2}</BulletWrapper>
+                                        <BulletWrapper>{fact3}</BulletWrapper>
+                                        <BulletWrapper>{fact4}</BulletWrapper>
+                                    </ul>
 
-                        </HiddenWrapper>
-                    </NameWrapper>
-                </CardInner>
-            </BackSide>
-        </Flippy>
+                                </HiddenWrapper>
+                            </NameWrapper>
+                        </CardInner>
+                    </BackSide>
+                </Flippy>
+            ) : (
+                    <Flippy
+                        flipOnHover={false} // default false
+                        flipDirection="vertical" // horizontal or vertical
+                    // if you pass isFlipped prop component will be controlled component.
+                    // and other props, which will go to div
+                    >
+                        <FrontSide>
+                            <StyledCard >
+                                <CardInner>
+                                    <NameWrapper>
+                                        <h4>
+                                            {name}
+                                        </h4>
+                                        <h5>
+                                            {title}
+                                        </h5>
+                                    </NameWrapper>
+
+                                    <ProfilePhoto background={image} />
+                                </CardInner>
+                            </StyledCard>
+                        </FrontSide>
+                        <BackSide
+                            style={
+                                {
+                                    backgroundColor: '#212231',
+                                    borderRadius: '0px 30px 30px 30px',
+                                    color: '#fff',
+                                    background: '#212231',
+                                    width: '320px',
+                                    height: '368px',
+                                    background: '#212231',
+                                    boxShadow: '0px 4px 10px #000000',
+                                    margin: '24px 24px 0 0px'
+
+                                }}>
+
+                            <CardInner>
+                                <NameWrapper>
+                                    <h4>
+                                        {name}
+                                    </h4>
+                                    <h5>
+                                        {title}
+                                    </h5>
+                                    <HiddenWrapper>
+                                        <ul>
+                                            <BulletWrapper>{fact1}</BulletWrapper>
+                                            <BulletWrapper>{fact2}</BulletWrapper>
+                                            <BulletWrapper>{fact3}</BulletWrapper>
+                                            <BulletWrapper>{fact4}</BulletWrapper>
+                                        </ul>
+
+                                    </HiddenWrapper>
+                                </NameWrapper>
+                            </CardInner>
+                        </BackSide>
+                    </Flippy>
+                )}
+        </div>
     );
 };
 
