@@ -60,7 +60,7 @@ const ProfilePhoto = styled.div`
 
 
 const HiddenWrapper = styled.ul`
-    margin-top: 3vh;
+    margin-top: 1vh;
     font-size: auto;
     width: 100%;
     height: 100%;
