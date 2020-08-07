@@ -91,10 +91,10 @@ const ProjectPage = ({ project }) => {
             <StyledText>
                 {project.timeline}
             </StyledText> */}
-            <AppStoreUrl href={project.appstoreurl} target="blank">
+            {/* <AppStoreUrl href={project.appstoreurl} target="blank">
                 <AppstoreLogo src={AppStoreLogo}>
                 </AppstoreLogo>
-            </AppStoreUrl>
+            </AppStoreUrl> */}
         </Wrapper>
 
     );

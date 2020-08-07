@@ -6,15 +6,17 @@ import brian_img from '../../assets/team/brian_img.png'
 import gaje_image from '../../assets/team/gaje_img.jpg'
 import drew_img from '../../assets/team/drew_img.jpg'
 import jesse_img from '../../assets/team/jesse_img.JPG'
+import ben_img from '../../assets/team/ben_img.jpeg'
 
 
 const team = [
-    {name: 'Austin Betzer', title: 'iOS Developer'},
-    {name: 'Andrew Carver', title: 'Android Developer'},
+    { name: 'Austin Betzer', title: 'iOS Developer', },
+    { name: 'Andrew Carver', title: 'Android Developer' },
     { name: 'Brian Clay', title: 'Designer' },
     { name: 'Drew Carver', title: 'iOS Developer' },
     { name: 'Gaje Robarge', title: 'Web Developer' },
-    { name: 'Jesse Packwood', title: 'Web Developer'}
+    { name: 'Jesse Packwood', title: 'Web Developer' },
+    { name: 'Ben Kimble', title: 'Backend Developer - AWS Guru' }
 ]
 
 const TeamWrapper = styled.div`
@@ -34,16 +36,19 @@ const TeamWrapper = styled.div`
     }
 `
 
-class TeamContainer extends React.Component { 
+class TeamContainer extends React.Component {
     render() {
 
-        return  (
+        return (
             <TeamWrapper>
-                <TeamCard name='Austin Betzer' title='iOS Developer' image={austin_img} />
-                <TeamCard name='Brian Clay' title='Designer' image={brian_img} />
-                <TeamCard name='Drew Carver' title='iOS Developer' image={drew_img} />
-                <TeamCard name='Gaje Robarge' title='Web Developer' image={gaje_image} />
-                <TeamCard name='Jesse Packwood' title='Web Developer' image={jesse_img} />
+                <TeamCard name='Austin Betzer' title='iOS Developer' image={austin_img} fact1='4 years of experience' fact2='Taken 6 iOS apps live' fact3='Loves hiking and skiing' fact4='Excited for Mulan' />
+                <TeamCard name='Ben Kimble' title='Backend Developer - AWS Guru' image={ben_img} fact1='Unreal Engine and Unity Game Developer' fact2='C++ Developer' fact3='Blockchain Enthusiast' fact4='Game Music Composer' />
+                <TeamCard name='Brian Clay' title='Designer' image={brian_img} fact1='Can ride a unicycle' fact2='Has done a 300 ft rappel' fact3='One time did a barrel role while tubing' fact4="Is the only designer that doesn't like Photoshop" />
+                <TeamCard name='Gaje Robarge' title='Web Developer' image={gaje_image} fact1='3 years of experience' fact2='Has been to 15 Dead & Company shows' fact3='Loves to camp' fact4='Certified Jedi' />
+                <TeamCard name='Jesse Packwood' title='Web Developer' image={jesse_img} fact1='Javascript Wizard' fact2='Motorcycle Enthusiast' fact3='Professional Photographer' fact4='Stay at home dog dad' />
+                <TeamCard name='Drew Carver' title='iOS Developer' image={drew_img} fact1='Drummer' fact2='Private pilot in-training' fact3='Grew up in Orange County, CA' fact4='Experience building enterprise software(Specifically for utility companies)' />
+                
+                
             </TeamWrapper>
         )
     }
