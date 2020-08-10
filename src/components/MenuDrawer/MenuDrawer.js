@@ -182,10 +182,10 @@ const MenuDrawer = ({ toggleMenu }) => {
                             <ActionLink text='info@strides.com' url='mailto:info@strides.com' />
                             <Spacer />
                             <ActionLink text='(208) 227-4479' url='tel:(208) 227-4479' />
-                            <LogoWrapper href={'//www.linkedin.com/company/stridesdev'} target="_blank"  >
+                            <LogoWrapper href={'//www.upwork.com/ag/strides/'} target="_blank"  >
                                     <SocialLogo src={UpworkLogo} alt='upwork logo' />   
                                     </LogoWrapper>
-                                    <LogoWrapper href={'//www.upwork.com/ag/strides/'} target="_blank">
+                                    <LogoWrapper href={'//www.linkedin.com/company/stridesdev'} target="_blank">
                                     <SocialLogo src={LinkedinLogo}  alt="linkedin logo" />
                                     </LogoWrapper>
                         </DrawerInner>
@@ -240,16 +240,12 @@ const MenuDrawer = ({ toggleMenu }) => {
                                 <Spacer />
                                 <ActionLink text='(208) 227-4479' url='tel:(208) 227-4479' />
                                 <Spacer />
-                                <LogoWrapper href={'//www.linkedin.com/company/stridesdev'} target="_blank"  >
+                                <LogoWrapper href={'//www.upwork.com/ag/strides/'} target="_blank"  >
                                     <SocialLogo src={UpworkLogo} alt='upwork logo' />   
                                     </LogoWrapper>
-                                    <LogoWrapper href={'//www.upwork.com/ag/strides/'} target="_blank">
+                                    <LogoWrapper href={'//www.linkedin.com/company/stridesdev'} target="_blank">
                                     <SocialLogo src={LinkedinLogo}  alt="linkedin logo" />
                                     </LogoWrapper>
-                                {/* <StyledLink>
-                                <SocialProfile href={'//www.linkedin.com/company/stridesdev'} target="_blank" > Linkedin </SocialProfile>
-                                </StyledLink>
-                                <SocialProfile href={'//www.upwork.com/ag/strides/'} target="_blank" > UpWork </SocialProfile> */}
                             </DrawerInner>
                         </StyledDrawer>
                     </ThemeProvider></div>
