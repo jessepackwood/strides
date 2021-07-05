@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import ActionLink from '../../components/ActionLink/ActionLink'
-import GreenDot from '../../assets/green-circle.png'
 import {Link} from 'react-router-dom'
 
 const StyledCard = styled.div`
@@ -28,7 +27,7 @@ const CardContentWrapper = styled.div`
     position: relative;
     max-width: 504px;
     color: #fff;
-    height: 500px;
+    height: 65vh;
     background: #212231;
     box-shadow: 0px 4px 10px #000000;
     border-radius: 0px 30px 30px 30px;
@@ -36,37 +35,47 @@ const CardContentWrapper = styled.div`
     min-height: 348px;
     box-sizing: border-box;
 
-    @media (min-width: 768px){
+    @media (min-width: 500px){
         max-width: 544px;
+        width: 545px;
+        height: 243px;
+}
     };
+
+    
     @media (max-width: 500px) {
         flex-direction: column;
         width: 100%;
         padding: 24px;
-        height: 400px;
+        height: auto;
+        
     };
 `
 const TextWrapper = styled.div`
     width: 50%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `
 const ImageWrapper = styled.div`
     width: 50%;
     height: auto;
-    margin-left: 25px;
     @media (max-width: 500px) {
-        margin: 20px auto 0;
+        margin: inherit;
+        display: flex;
     }
 `
 const StyledImg = styled.img`
     height: auto;
-    width: 50%;
+    width: 40%;
     max-width: 290px;
     position: absolute;
+    margin-left: 3vw;
     @media (max-width: 500px) {
         width: 100%;
         height: auto;
-        margin: 16px 0 0;
+        margin: 2vw 20vw 0;
     }
 `
 
@@ -77,7 +86,6 @@ const StyledTitle = styled.h1`
     font-size: 32px;
     line-height: 41px;
     color: #FFFFFF;
-    margin: 0;
     @media (max-width: 500px) {
         width: 220px;
     }
@@ -89,6 +97,7 @@ const StyledSubtitle = styled.div`
     font-weight: 600;
     font-size: 16px;
     color: #FFFFFF;
+    margin-top: 2vh;
 `
 
 const StyledText = styled.p`
@@ -98,6 +107,7 @@ const StyledText = styled.p`
     font-size: 20px;
     line-height: 28px;
     color: #FFFFFF;
+    width: 255px;
     @media (max-width: 500px) {
         display: none;
 }

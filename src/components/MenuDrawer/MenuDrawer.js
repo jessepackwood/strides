@@ -5,16 +5,20 @@ import ActionLink from '../../components/ActionLink/ActionLink'
 import StyledHamburger from '../../components/Hamburger/Hamburger'
 import { Link } from 'react-router-dom'
 
+import UpworkLogo from '../../assets/upwork.svg'
+import LinkedinLogo from '../../assets/linkedin.svg'
+
+import { useState, useEffect } from 'react';
+
 const StyledDrawer = styled.div`
     position: fixed;
     top: 0;
     color: #fff;
     background-color: #08090F;
-    width: 100%;
+    width: 100vw;
     z-index: 2;
     left: 0;
-    box-sizing: border-box;
-    height: 100%;
+    height: 100vh;
     overflow: auto;
 
     @media(max-width: 768px){
@@ -29,12 +33,19 @@ const DrawerInner = styled.div`
 `
 
 const CloseBtnWrapper = styled.div`
+
     width: 100%;
+    height: 10vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 `
 
 const Spacer = styled.div`
-    height: 32px;
+    height: 35px;
 `
 
 const SpacerLarge = styled.div`
@@ -79,74 +90,168 @@ const MenuItem = styled.h4`
     }
 `
 
+const SocialProfile = styled.a`
+width: 116px;
+height: 25px;
+font-family: Muli;
+font-style: normal;
+font-weight: 900;
+font-size: 14px;
+color: #66E0B9;
+text-decoration: none;
+margin-right: 5vw;
+`
 
-const MenuDrawer = ({toggleMenu}) => {
+const LogoWrapper = styled.a`
+
+
+`
+
+const SocialLogo = styled.img`
+height: 30px;
+margin-right: 20px;
+margin-top: 20px;
+border-radius: 10px;
+
+ `
+
+
+
+
+const MenuDrawer = ({ toggleMenu }) => {
+    const [isDesktop, setDesktop] = useState(window.innerWidth > 780);
+
+    const updateMedia = () => {
+        setDesktop(window.innerWidth > 780);
+    };
+
+    useEffect(() => {
+        window.addEventListener("resize", updateMedia);
+        return () => window.removeEventListener("resize", updateMedia);
+    });
+
     return (
-        <ThemeProvider theme={globalTheme}>
-            <StyledDrawer>
-                <DrawerInner>
-                    <CloseBtnWrapper>
-                        <StyledHamburger toggleMenu={toggleMenu}>
-                            Close
-                        </StyledHamburger>
-                    </CloseBtnWrapper>
-                    <MenuTitle>
-                        Work
-                    </MenuTitle>
-                    <StyledLink to='/work/the-daily-shift'>
-                        <MenuItem onClick={toggleMenu}>
-                            The Daily Shift
-                        </MenuItem>
-                    </StyledLink>
-                    <StyledLink to='/work/blossom'>
-                        <MenuItem onClick={toggleMenu}>
-                            Blossom
-                        </MenuItem>
-                    </StyledLink>
-                    <StyledLink to='/work/whole-body-challenge'>
-                        <MenuItem onClick={toggleMenu}>
-                            Whole Body Challenge
-                        </MenuItem>
-                    </StyledLink>
-                    <StyledLink to='/work/next-level-sports'>
-                        <MenuItem onClick={toggleMenu}>
-                            Next Level Sports
-                        </MenuItem>
-                    </StyledLink>
-                    <StyledLink to='/work/starv'>
-                        <MenuItem onClick={toggleMenu}>
-                            Starv
-                        </MenuItem>
-                    </StyledLink>
-                    <StyledLink to='/work/equine-trader'>
-                        <MenuItem onClick={toggleMenu}>
-                            Equine Trader
-                        </MenuItem>
-                    </StyledLink>
-                    <MenuTitle>
-                        Connect
-                    </MenuTitle>
-                    <StyledExternalLink href='https://www.upwork.com/ag/strides/'>
-                        <MenuItem>
-                            Upwork
-                        </MenuItem>
-                    </StyledExternalLink>
-                    <StyledExternalLink href='linkedin.com/company/strides-dev'>
-                        <MenuItem>
-                            LinkedIn
-                        </MenuItem>
-                    </StyledExternalLink>
-                    <MenuTitle>
-                        Contact
-                    </MenuTitle>
-                    <ActionLink text='info@strides.com' url='mailto:info@strides.com' />
-                    <Spacer />
-                    <ActionLink text='(208) 227-4479' url='tel:(208) 227-4479' />
-                </DrawerInner>
-            </StyledDrawer>
-        </ThemeProvider>
+        <div>
+            {isDesktop ? (
+                <div> <ThemeProvider theme={globalTheme}>
+                    <StyledDrawer>
+                        <DrawerInner>
 
-    );
+                            <CloseBtnWrapper>
+                                <StyledHamburger toggleMenu={toggleMenu}>
+                                    Close
+                    </StyledHamburger>
+                            </CloseBtnWrapper>
+
+                            <MenuTitle>
+                                Work
+                </MenuTitle>
+                            <StyledLink to='/work/the-daily-shift'>
+                                <MenuItem onClick={toggleMenu}>
+                                    The Daily Shift
+                    </MenuItem>
+                            </StyledLink>
+                            <StyledLink to='/work/blossom'>
+                                <MenuItem onClick={toggleMenu}>
+                                    Blossom
+                    </MenuItem>
+                            </StyledLink>
+                            <StyledLink to='/work/whole-body-challenge'>
+                                <MenuItem onClick={toggleMenu}>
+                                    Whole Body Challenge
+                    </MenuItem>
+                            </StyledLink>
+                            <StyledLink to='/work/next-level-sports'>
+                                <MenuItem onClick={toggleMenu}>
+                                    Next Level Sports
+                    </MenuItem>
+                            </StyledLink>
+                            <StyledLink to='/work/starv'>
+                                <MenuItem onClick={toggleMenu}>
+                                    Starv
+                    </MenuItem>
+                            </StyledLink>
+                            <StyledLink to='/work/equine-trader'>
+                                <MenuItem onClick={toggleMenu}>
+                                    Equine Trader
+                    </MenuItem>
+                            </StyledLink>
+                            <MenuTitle>
+                                Contact
+                </MenuTitle>
+                            <ActionLink text='info@strides.com' url='mailto:info@strides.com' />
+                            <Spacer />
+                            <ActionLink text='(208) 227-4479' url='tel:(208) 227-4479' />
+                            <LogoWrapper href={'//www.upwork.com/ag/strides/'} target="_blank"  >
+                                    <SocialLogo src={UpworkLogo} alt='upwork logo' />   
+                                    </LogoWrapper>
+                                    <LogoWrapper href={'//www.linkedin.com/company/stridesdev'} target="_blank">
+                                    <SocialLogo src={LinkedinLogo}  alt="linkedin logo" />
+                                    </LogoWrapper>
+                        </DrawerInner>
+                    </StyledDrawer>
+                </ThemeProvider></div>
+            ) : (
+                    <div> <ThemeProvider theme={globalTheme}>
+                        <StyledDrawer>
+                            <DrawerInner>
+                                <CloseBtnWrapper>
+                                    <StyledHamburger toggleMenu={toggleMenu}>
+                                        Close
+                    </StyledHamburger>
+                                </CloseBtnWrapper>
+                                <MenuTitle>
+                                    Work
+                </MenuTitle>
+                                <StyledLink to='/work/the-daily-shift'>
+                                    <MenuItem onClick={toggleMenu}>
+                                        The Daily Shift
+                    </MenuItem>
+                                </StyledLink>
+                                <StyledLink to='/work/blossom'>
+                                    <MenuItem onClick={toggleMenu}>
+                                        Blossom
+                    </MenuItem>
+                                </StyledLink>
+                                <StyledLink to='/work/whole-body-challenge'>
+                                    <MenuItem onClick={toggleMenu}>
+                                        Whole Body Challenge
+                    </MenuItem>
+                                </StyledLink>
+                                <StyledLink to='/work/next-level-sports'>
+                                    <MenuItem onClick={toggleMenu}>
+                                        Next Level Sports
+                    </MenuItem>
+                                </StyledLink>
+                                <StyledLink to='/work/starv'>
+                                    <MenuItem onClick={toggleMenu}>
+                                        Starv
+                    </MenuItem>
+                                </StyledLink>
+                                <StyledLink to='/work/equine-trader'>
+                                    <MenuItem onClick={toggleMenu}>
+                                        Equine Trader
+                    </MenuItem>
+                                </StyledLink>
+                                <MenuTitle>
+                                    Contact
+                </MenuTitle>
+                                <ActionLink text='info@strides.com' url='mailto:info@strides.com' />
+                                <Spacer />
+                                <ActionLink text='(208) 227-4479' url='tel:(208) 227-4479' />
+                                <Spacer />
+                                <LogoWrapper href={'//www.upwork.com/ag/strides/'} target="_blank"  >
+                                    <SocialLogo src={UpworkLogo} alt='upwork logo' />   
+                                    </LogoWrapper>
+                                    <LogoWrapper href={'//www.linkedin.com/company/stridesdev'} target="_blank">
+                                    <SocialLogo src={LinkedinLogo}  alt="linkedin logo" />
+                                    </LogoWrapper>
+                            </DrawerInner>
+                        </StyledDrawer>
+                    </ThemeProvider></div>
+                )}
+        </div>
+    )
 };
 
 export default MenuDrawer;
